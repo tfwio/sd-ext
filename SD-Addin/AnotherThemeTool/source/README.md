@@ -2,6 +2,12 @@
 
 This addin is an elaboration built upon [AlienJust/ThemeTool](https://github.com/AlienJust/ThemeTool) for SharpDevelop 4x and 5x.
 
+![](https://raw.githubusercontent.com/tfwio/sd-ext/0c9d644e1975e4bdc1ecdbdb031c3df0852beed4/SD-Addin/AnotherThemeTool/artifacts/screen-blue.png)
+
+![](https://raw.githubusercontent.com/tfwio/sd-ext/0c9d644e1975e4bdc1ecdbdb031c3df0852beed4/SD-Addin/AnotherThemeTool/artifacts/screen-light.png)
+
+![](https://raw.githubusercontent.com/tfwio/sd-ext/0c9d644e1975e4bdc1ecdbdb031c3df0852beed4/SD-Addin/AnotherThemeTool/artifacts/screen-dark.png)
+
 - This project targets SharpDevelop 5.x
 
 ## Features In Progress
@@ -12,7 +18,6 @@ This addin is an elaboration built upon [AlienJust/ThemeTool](https://github.com
     - Theme settings are stored in YAML setting files.
 
 ## How to customize the theme
-
 
 - Export a theme file from the Tools-Memu.
 - Import the theme back into SD through the same menu.
