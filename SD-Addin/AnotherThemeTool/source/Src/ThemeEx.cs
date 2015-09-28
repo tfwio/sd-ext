@@ -110,7 +110,11 @@
     
     static public string ToGradientStopString(this GradientStopCollection input)
     {
-      if (input.Count==0) return "#000000:0";
+      if (input.Count==0) return "#00000000:0";
+      
+      if (input.Count==1)
+        return string.Format("#{0}:{1}", input[0].Color.ToHexString(), input[0].Offset);
+      
       var airy = new string[input.Count];
       for (int i=0; i < input.Count; i++)
       {
