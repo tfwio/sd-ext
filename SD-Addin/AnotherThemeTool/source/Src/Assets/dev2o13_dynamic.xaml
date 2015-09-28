@@ -13,9 +13,6 @@
   <!-- ad:AvalonDockBrushes.DefaultBackgroundBrush -->
   <SolidColorBrush x:Key="{ComponentResourceKey TypeInTargetAssembly={x:Type ad:DockingManager}, ResourceId={x:Static ad:AvalonDockBrushes.DefaultBackgroundBrush}}" Color="{Binding Source={x:Static th:MsDev2013_Theme.Instance}, Path=DefaultBackgroundBrush}" />
   <SolidColorBrush x:Key="DotsDefault" Color="{Binding Source={x:Static th:MsDev2013_Theme.Instance}, Path=DotsDefault}" />
-  <SolidColorBrush x:Key="DotsActive" Color="{Binding Source={x:Static th:MsDev2013_Theme.Instance}, Path=DotsActive}" />
-  <!-- Hover is never used -->
-  <SolidColorBrush x:Key="DotsHover" Color="{Binding Source={x:Static th:MsDev2013_Theme.Instance}, Path=DotsHover}" />
   <!--Foregroung Colors-->
   <SolidColorBrush x:Key="LightForegroundBrush" Color="{Binding Source={x:Static th:MsDev2013_Theme.Instance}, Path=LightForegroundBrush}" />
   <SolidColorBrush x:Key="DarkForegroundBrush" Color="{Binding Source={x:Static th:MsDev2013_Theme.Instance}, Path=DarkForegroundBrush}" />

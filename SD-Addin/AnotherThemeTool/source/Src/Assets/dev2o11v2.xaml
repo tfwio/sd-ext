@@ -7,8 +7,8 @@
 	
 	<ResourceDictionary.MergedDictionaries>
 		<ResourceDictionary Source="/AvalonDock;component/themes/generic.xaml" />
-		<ResourceDictionary Source="/Mu;component/src/assets/toolbar.xaml" />
-		<ResourceDictionary Source="/Mu;component/src/assets/menuitems-default.xaml" />
+		<ResourceDictionary Source="/AnotherThemeTool;component/src/assets/toolbar.xaml" />
+		<ResourceDictionary Source="/AnotherThemeTool;component/src/assets/menuitems-default.xaml" />
 	</ResourceDictionary.MergedDictionaries>
   
   

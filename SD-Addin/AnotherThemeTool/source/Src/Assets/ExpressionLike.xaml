@@ -373,14 +373,14 @@
                                     </Grid.ColumnDefinitions>
                                     <Button x:Name="btnPinAutoHide" Grid.Column="1" Style="{StaticResource PaneHeaderCommandStyle}" Command="ad:DockablePaneCommands.ToggleAutoHide"
                                                 Width="15" Height="15" VerticalAlignment="Center" Opacity="0.6">
-                                        <ad:ImageEx Source="/Mu;component/src/assets/ExpDark/PinAutoHide.png" Width="13"  />
+                                        <ad:ImageEx Source="/AnotherThemeTool;component/src/assets/ExpDark/PinAutoHide.png" Width="13"  />
                                     </Button>
                                     <Button x:Name="PART_CloseButton" Grid.Column="2" Margin="6,0,2,0" 
                                             Style="{StaticResource PaneHeaderCommandStyle}" 
                                             Width="14"
                                             Height="13"
                                             Command="ad:DockablePaneCommands.Close" Opacity="0.8">
-                                        <ad:ImageEx Source="/Mu;component/src/assets/ExpDark/PinClose.png" Width="13" />
+                                        <ad:ImageEx Source="/AnotherThemeTool;component/src/assets/ExpDark/PinClose.png" Width="13" />
                                     </Button>
                                     <ad:DockableTabPanel	
                                                 IsItemsHost="True" 
@@ -484,7 +484,7 @@
                                     Height="13"
                                     ToolTip="{x:Static adRes:Resources.ManagedContentCommands_Close}"
                                     Command="ad:ManagedContentCommands.Close" Opacity="0.8">
-                                <Image Source="/Mu;component/src/assets/ExpDark/PinClose.png" Stretch="None"/>
+                                <Image Source="/AnotherThemeTool;component/src/assets/ExpDark/PinClose.png" Stretch="None"/>
                             </Button>    
                         </StackPanel>
                         </Border>
@@ -831,7 +831,7 @@
                                     Command="ad:DockablePaneCommands.Close"
                                     CommandTarget="{Binding HostedPane, RelativeSource={RelativeSource TemplatedParent}}"
                                     Opacity="0.8">
-                                <ad:ImageEx Source="/Mu;component/src/assets/ExpDark/PinClose.png" Width="13"  />
+                                <ad:ImageEx Source="/AnotherThemeTool;component/src/assets/ExpDark/PinClose.png" Width="13"  />
                             </Button>
                         </Grid>
                     </Border>

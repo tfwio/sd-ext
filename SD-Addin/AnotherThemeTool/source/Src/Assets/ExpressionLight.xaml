@@ -346,7 +346,7 @@
 									        Command="ad:DockablePaneCommands.ToggleAutoHide"
 									        Opacity="0.6"
 									        Style="{StaticResource PaneHeaderCommandStyle}">
-										<ad:ImageEx Width="13" Source="/Mu;component/src/assets/ExpDark/PinAutoHide.png" />
+										<ad:ImageEx Width="13" Source="/AnotherThemeTool;component/src/assets/ExpDark/PinAutoHide.png" />
 									</Button>
 									<Button x:Name="PART_CloseButton"
 									        Grid.Column="2"
@@ -356,7 +356,7 @@
 									        Command="ad:DockablePaneCommands.Close"
 									        Opacity="0.8"
 									        Style="{StaticResource PaneHeaderCommandStyle}">
-										<ad:ImageEx Width="13" Source="/Mu;component/src/assets/ExpDark/PinClose.png" />
+										<ad:ImageEx Width="13" Source="/AnotherThemeTool;component/src/assets/ExpDark/PinClose.png" />
 									</Button>
 									<ad:DockableTabPanel IsItemsHost="True" TabItemStyle="{DynamicResource DockableContentTabItemStyle}" />
 								</Grid>
@@ -462,7 +462,7 @@
 								        Style="{StaticResource PaneHeaderCommandStyle}"
 								        ToolTip="{x:Static adRes:Resources.ManagedContentCommands_Close}"
 								        Visibility="Collapsed">
-									<Image Source="/Mu;component/src/assets/ExpDark/PinClose.png" Stretch="None" />
+									<Image Source="/AnotherThemeTool;component/src/assets/ExpDark/PinClose.png" Stretch="None" />
 								</Button>
 							</StackPanel>
 						</Border>
@@ -872,7 +872,7 @@
 							                                RelativeSource={RelativeSource TemplatedParent}}"
 							        Opacity="0.8"
 							        Style="{StaticResource PaneHeaderCommandStyle}">
-								<ad:ImageEx Width="13" Source="/Mu;component/src/assets/ExpDark/PinClose.png" />
+								<ad:ImageEx Width="13" Source="/AnotherThemeTool;component/src/assets/ExpDark/PinClose.png" />
 							</Button>
 						</Grid>
 					</Border>
