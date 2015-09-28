@@ -154,36 +154,6 @@
   <data name="DictionaryList_ErrorMessage_Title" xml:space="preserve">
     <value>DictionaryList Usage Error</value>
   </data>
-  <data name="TestRow:Value" xml:space="preserve">
-    <value>
-&lt;div class='xpopup'&gt;
-
-	&lt;span style='float:right'&gt;&lt;input pickupid='{Pickup_ID}' type='button' value='edit' id='editbutton' /&gt;&lt;/span&gt;
-	
-	&lt;div class='addr' style='float:left'&gt;
-		&lt;font size='4'&gt;&lt;b&gt;{Pickup_Name}&lt;/b&gt;&lt;/font&gt;&lt;br /&gt;
-		&lt;font size='1'&gt;{addrStreet} {addrSuite}&lt;br /&gt;
-		{addrCity} {addrState} {addrZip}&lt;/font&gt;
-    &lt;/div&gt;
-    
-    &lt;div class='phone' style='float:left;'&gt;
-		&lt;table style='border-collapse: collapse; min-width:120px;'&gt;
-			&lt;tr&gt;&lt;td&gt;{Phone_1}&lt;/td&gt;&lt;/tr&gt;
-			&lt;tr&gt;&lt;td&gt;{Phone_2}&lt;/td&gt;&lt;/tr&gt;
-			&lt;tr&gt;&lt;td&gt;{Phone_3}&lt;/td&gt;&lt;/tr&gt;
-			&lt;tr&gt;&lt;td&gt;{Phone_4}&lt;/td&gt;&lt;/tr&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-	
-	&lt;div class='phone' style='max-width:220px;'&gt;
-		&lt;table style='border-collapse: collapse;'&gt;
-			&lt;tr&gt;&lt;td&gt;Hours&lt;/td&gt;&lt;td&gt;{hours}&lt;/td&gt;&lt;/tr&gt;
-			&lt;tr&gt;&lt;td&gt;Note&lt;/td&gt;&lt;td&gt;{note}&lt;/td&gt;&lt;/tr&gt;
-		&lt;/table&gt;
-	&lt;/div&gt;
-
-&lt;/div&gt;</value>
-  </data>
   <data name="DictionaryList_ErrorMessage" xml:space="preserve">
     <value>Argument ‘{0}’ as allready been added to the Dictionary.</value>
   </data>
@@ -191,12 +161,5 @@
     <value>    &lt;ItemGroup&gt;@{nodes}
     &lt;/ItemGroup&gt;
 </value>
-  </data>
-  <data name="XmlFile" xml:space="preserve">
-    <value>&lt;?xml version="1.0"?&gt;
-&lt;config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;file-data&gt;D:\DEV\DATA\schema\Prime\prime.data.main.xdata&lt;/file-data&gt;
-  &lt;file-template&gt;D:\DEV\DATA\schema\Prime\NewPrimeTemplates4N.xtpl&lt;/file-template&gt;
-&lt;/config&gt;</value>
   </data>
 </root>
