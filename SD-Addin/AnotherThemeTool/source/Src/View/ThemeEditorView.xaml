@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="ThemeTool.View.ThemeEditorView" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:avalonedit="http://icsharpcode.net/sharpdevelop/avalonedit">
+  <Grid>
+    <Label Content="Select a theme" Grid.Column="0" Grid.Row="0" HorizontalContentAlignment="Center" />
+    <ComboBox x:Name="cb_ThemeId" Grid.Row="1" Grid.Column="0" />
+    <Label Content="Select a Colour-Setting" Grid.Column="1" Grid.Row="0" HorizontalContentAlignment="Center" />
+    <ComboBox x:Name="cb_ColourSetting" Grid.Row="1" Grid.Column="1" />
+    <avalonedit:TextEditor Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="2" />
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition />
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="0.5*" />
+      <ColumnDefinition Width="0.5*" />
+    </Grid.ColumnDefinitions>
+  </Grid>
+</UserControl>

@@ -1,0 +1,63 @@
+<AddIn name="Another-ThemeTool" author="oio" url="https://tfwio.wordpress.com/2015/09/27/another-theme-tool/" description="Link/Includes Snippit generator">
+	<Manifest>
+		<Identity name="AnotherThemeTool" version="0.1.0" />
+	</Manifest>
+	<Runtime>
+		<Import assembly="AnotherThemeTool.dll" />
+		<Import assembly="YamlDotNet.dll" />
+		<Import assembly="FirstFloor.ModernUI.dll" />
+		<Import assembly=":AvalonDock" />
+		<Import assembly=":ICSharpCode.AvalonEdit" />
+		<Import assembly=":ICSharpCode.Core" />
+		<Import assembly=":ICSharpCode.SharpDevelop" />
+		<!--
+			SD4 uses: ICSharpCode.SharpDevelop.Dom
+		<Import assembly=":ICSharpCode.SharpDevelop.Dom" />
+		-->
+		<Import assembly=":ICSharpCode.SharpDevelop.Widgets" />
+	</Runtime>
+	<Path name="/SharpDevelop/Autostart">
+		<Class id="ThemeToolCommandStartup" class="ThemeTool.ToolCommandStartup" />
+	</Path>
+	<Path name="/SharpDevelop/Workbench/Tools">
+		
+	  <MenuItem id="TtDefaultCommand" label="Generate Links" class="ThemeTool.Commands.ShowMuControl" />
+	  
+	  <MenuItem id="ThemeInOut" label="Import/Export Theme" type="Menu">
+  		<MenuItem id="TestImport" label="Import 2013 Theme" class="ThemeTool.Commands.ImportMsDev2013Theme" />
+  		<MenuItem id="TextExport" label="Export 2013 Theme" class="ThemeTool.Commands.ExportMsDev2013Theme" />
+			<MenuItem type="Separator" />
+  		<MenuItem id="PgImport" label="FontSize Increase" shortcut="Ctrl|+" />
+  		<MenuItem id="PgImport" label="FontSize Decrease" shortcut="Ctrl|-" />
+			<MenuItem type="Separator" />
+  		<MenuItem id="PgImport" label="Import PropertyGrid Settings" />
+  		<MenuItem id="PgExport" label="Export PropertyGrid Settings" />
+			<MenuItem type="Separator" />
+  		<MenuItem id="TestImportAgain" label="Reload Custom Theme" class="ThemeTool.Commands.ReloadLastTheme" />
+	  </MenuItem>
+	  
+	  <MenuItem id="ThemeToolsRoot" label="Theme Tool" type="Menu">
+			<MenuItem id="ThemeToolCommandDefault" label="Default" class="ThemeTool.ToolCommandDefault" />
+			<MenuItem id="ThemeToolCommandGeneric" label="Generic" class="ThemeTool.ToolCommandGeneric" />
+			<MenuItem type="Separator" />
+			<MenuItem id="ThemeToolCommandClassic" label="Classic" class="ThemeTool.ToolCommandClassic" />
+			<MenuItem id="ThemeToolCommandAero" label="Aero" class="ThemeTool.ToolCommandAero" />
+			<MenuItem id="ThemeToolCommandLuna" label="Luna" class="ThemeTool.ToolCommandLuna" />
+			<MenuItem type="Separator" />
+			<MenuItem id="ThemeToolCommandAutumn" label="Autumn" class="ThemeTool.ToolCommandAutumn" />
+			<MenuItem id="ThemeToolCommandGrass" label="Grass" class="ThemeTool.ToolCommandGrass" />
+			<MenuItem type="Separator" />
+			<MenuItem id="ThemeToolCommandDev13" label="MSDEV 2013" class="ThemeTool.ThemeToolCommandDev13dyn" />
+			<MenuItem type="Separator" />
+			<MenuItem id="ThemeToolCommandDev10" label="Dev 2010 (orig)" class="ThemeTool.ToolCommandDev10_orig" />
+			<MenuItem id="ThemeToolCommandDev10Green" label="Dev 2010 Green" class="ThemeTool.ToolCommandDev10Green" />
+			<MenuItem id="ThemeToolCommandDev10Red" label="Dev 2010 Red" class="ThemeTool.ToolCommandDev10Red" />
+			<MenuItem type="Separator" />
+			<MenuItem id="ThemeToolCommandExpressDark" label="Expression Dark" class="ThemeTool.ToolCommandExpressDark" />
+			<MenuItem id="ThemeToolCommandExpressLight" label="Expression Light" class="ThemeTool.ToolCommandExpressLight" />
+			<MenuItem type="Separator" />
+			<MenuItem id="ThemeToolCommandCustom" label="Custom..." class="ThemeTool.ToolCommandCustom" />
+		</MenuItem>
+	
+  </Path>
+</AddIn>

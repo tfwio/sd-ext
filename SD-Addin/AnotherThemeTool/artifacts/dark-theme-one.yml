@@ -1,0 +1,60 @@
+Theme:
+- Name: blue-default
+  # This is a comment
+  DefaultFontFamily: Segoe Script
+  # This is a comment
+  DefaultFontSize: 18
+  GeomBrush0: '#FFFFFF'
+  # This is a comment
+  GeomBrush1: '#35496A'
+  GeomBrush2: '#293955'
+  DefaultBackgroundBrush: '#2d2d30'
+  LightForegroundBrush: '#A0A0A0'
+  DarkForegroundBrush: '#FFFFFF'
+  # this is a comment
+  # Un-pinned (docked) T,L,B,R
+  ManagedContentTabControlNormalBorderBrush: '#00FFFFFF'
+  
+  ManagedContentTabItemNormalBorderBrush: '#3f3f46'
+  ManagedContentTabItemSelectedBorderBrush: '#3f3f46'
+  ManagedContentTabItemHotBorderBrush: '#3f3f46'
+  ManagedContentTabItemDisabledBorderBrush: '#3f3f46'
+
+  ManagedContentTabItemSelectedBorderBackround: '#FFFFFF'
+
+  ManagedContentTabItemNormalBackground: '#00000000'
+  ManagedContentTabItemInvNormalBackground: '#00FF00:1'
+  ManagedContentTabItemHotBackground: '#3e3e40:1'
+  ManagedContentTabItemSelectedBackground: '#252526'
+  ManagedContentTabItemDisabledBackground: '#4D6082'
+  # This is a comment
+  DockablePaneTitleBackgroundSelected: '#2d2d30:1'
+  DockablePaneTitleBackground: '#2d2d30:1'
+  DockablePaneTitleForeground: '#A0A0A0'
+  DockablePaneTitleForegroundSelected: '#FFFFFF'
+
+  DocumentHeaderForeground: '#A0A0A0'
+  DocumentHeaderForegroundSelected: '#FFFFFF'
+  DocumentHeaderForegroundSelectedActivated: '#FFFFFF'
+
+  DocumentHeaderBackground: '#007acc:1'
+
+  DocumentHeaderBorderBrushMouseOver: '#00000000'
+
+  DocumentHeaderBackgroundSelected: '#3f3f46:1'
+  DocumentHeaderBackgroundSelectedActivated: '#007acc:1'
+  DocumentHeaderBackgroundMouseOver: '#1b94e5:0'
+
+  DocumentHeaderBorder: '#FF0000'
+  DocumentHeaderBorderSelected: '#4D6082'
+  DocumentHeaderBorderSelectedActivated: '#007acc'
+
+  #3f3f46 (border for docked elements)
+  PaneHeaderCommandBorderBrush: '#4D6082,#4D6082:1'
+  PaneHeaderCommandBackground: '#FFFFFF'
+  # While Dragging a window...
+  OverlayWindowMainBorderBrush: '#4D6082'
+  OverlayWindowIntBorderBackground: '#FFFFFF,#C0C0C0:1'
+  OverlayWindowIntBorderBrush: '#00FF00'
+  OverlayWindowIntBorderBrush2: '#4D6082'
+  OverlayWindowIntBorderBackground2: '#4D6082,#4D6082:1'

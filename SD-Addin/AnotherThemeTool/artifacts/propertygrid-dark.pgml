@@ -1,0 +1,15 @@
+PropertyGridSettings:
+- BackColor:             '#2D2D2D' # 45,45,45         
+  CategoryForeColor:     '#FFFFFF' 
+  CategorySplitterColor: '#2D2D2D' 
+  CommandsBackColor:     '#2D2D2D' 
+  CommandsBorderColor:   '#464646' 
+  CommandsForeColor:     '#FFFF00' 
+  DisabledItemForeColor: '#C0C0C0' 
+  HelpBackColor:         '#2D2D2D' 
+  HelpBorderColor:       '#464646' # 70,70,70
+  HelpForeColor:         '#DCDCDC' # 220,220,220
+  LineColor:             '#373737' # 55,55,55
+  ViewBackColor:         '#2D2D2D' # 
+  ViewBorderColor:       '#404040' # 64,64,64
+  ViewForeColor:         '#969696' # 150,150,150
