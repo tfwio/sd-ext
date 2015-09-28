@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AnotherThemeTool {
+namespace ThemeTool {
   using System;
   
   
@@ -39,7 +39,7 @@ namespace AnotherThemeTool {
     internal static global::System.Resources.ResourceManager ResourceManager {
       get {
         if (object.ReferenceEquals(resourceMan, null)) {
-          global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("AnotherThemeTool.Strings", typeof(Strings).Assembly);
+          global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ThemeTool.Strings", typeof(Strings).Assembly);
           resourceMan = temp;
         }
         return resourceMan;
@@ -168,6 +168,39 @@ namespace AnotherThemeTool {
     internal static string TagLink {
       get {
         return ResourceManager.GetString("TagLink", resourceCulture);
+      }
+    }
+    
+    /// <summary>
+    ///   Looks up a localized string similar to ThemeName: MsDev2013
+    ///Elements:
+    ///- Name: Name
+    ///  TypeName: string
+    ///  DefaultValue: blue-default
+    ///- Name: DefaultFontSize
+    ///  TypeName: Double
+    ///  DefaultValue:
+    ///- Name: DefaultFontFamily
+    ///  TypeName: FontFamily
+    ///  DefaultValue:
+    ///- Name: DotsDefault
+    ///  TypeName: Color
+    ///  DefaultValue: 40FFFFFF
+    ///- Name: DotsActive
+    ///  TypeName: Color
+    ///  DefaultValue: 40FFFFFF
+    ///- Name: DotsHover
+    ///  TypeName: Color
+    ///  DefaultValue: 40FFFFFF
+    ///- Name: GeomBrush0
+    ///  TypeName: Color
+    ///  DefaultValue: 35496A
+    ///- Name: GeomBrush1
+    ///  TypeN [rest of string was truncated]&quot;;.
+    /// </summary>
+    internal static string YamlThemeSchema {
+      get {
+        return ResourceManager.GetString("YamlThemeSchema", resourceCulture);
       }
     }
   }

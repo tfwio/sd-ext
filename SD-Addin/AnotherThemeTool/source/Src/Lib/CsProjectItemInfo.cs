@@ -4,7 +4,6 @@ using System.IO;
 using System.Linq;
 
 using ICSharpCode.SharpDevelop.Project;
-using AnotherThemeTool;
 
 namespace ThemeTool.Logic
 {

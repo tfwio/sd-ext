@@ -21,7 +21,7 @@
 	</Path>
 	<Path name="/SharpDevelop/Workbench/Tools">
 		
-	  <MenuItem id="TtDefaultCommand" label="Generate Links" class="ThemeTool.Commands.ShowMuControl" />
+	  <MenuItem id="TtDefaultCommand" label="Generate Links" class="ThemeTool.Commands.ShowImportUtilityControl" />
 	  
 	  <MenuItem id="ThemeInOut" label="Import/Export Theme" type="Menu">
   		<MenuItem id="TestImport" label="Import 2013 Theme" class="ThemeTool.Commands.ImportMsDev2013Theme" />

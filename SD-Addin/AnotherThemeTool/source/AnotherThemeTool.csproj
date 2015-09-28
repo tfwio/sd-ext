@@ -117,18 +117,22 @@
     </Compile>
     <Compile Include="Src\Commands\ExportMsDev2013Theme.cs" />
     <Compile Include="Src\Commands\ImportMsDev2013Theme.cs" />
-    <Compile Include="Src\MsDev2013Settings.cs">
-      <DependentUpon>MsDev2013_Theme.cs</DependentUpon>
+    <Compile Include="Src\Commands\ShowImportUtilityControl.cs" />
+    <Compile Include="Src\MsDev2013_Settings.cs">
+      <DependentUpon>MsDev2013_Settings.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
     </Compile>
-    <Compile Include="Src\Commands\ShowMuControl.cs" />
-    <Compile Include="Src\MsDev2013_T.cs">
-      <DependentUpon>MsDev2013_Theme.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Src\MsDev2013_Theme.cs" />
-    <Compile Include="Src\MsDev2013_Translator.cs">
-      <DependentUpon>MsDev2013_Theme.cs</DependentUpon>
+    <None Include="Src\MsDev2013_Settings.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>MsDev2013_Settings.cs</LastGenOutput>
+    </None>
+    <None Include="Src\MsDev2013_Theme.cs" />
+    <Compile Include="Src\MsDev2013_Th.cs">
+      <DependentUpon>MsDev2013_Th.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
     </Compile>
     <Compile Include="Src\ThemeEx.cs" />
+    <Compile Include="Src\ThemeGen.cs" />
     <Compile Include="Src\Lib\NormalizePathOptions.cs">
       <DependentUpon>NormalizePathTool.cs</DependentUpon>
     </Compile>
@@ -152,9 +156,7 @@
       <DependentUpon>MsDev2010_Theme.cs</DependentUpon>
     </Compile>
     <Compile Include="Src\MsDev2010_Theme.cs" />
-    <Compile Include="Src\MsDev2013_Blue.cs">
-      <DependentUpon>MsDev2013_Theme.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Src\MsDev2013_Blue.cs" />
     <Compile Include="Src\ThemeTool.cs" />
     <Compile Include="Src\ToolSettings.cs">
       <DependentUpon>ThemeTool.cs</DependentUpon>
@@ -168,6 +170,10 @@
     <Compile Include="Strings.Designer.cs">
       <DependentUpon>Strings.resx</DependentUpon>
     </Compile>
+    <None Include="Src\MsDev2013_Th.tt">
+      <LastGenOutput>MsDev2013_Th.cs</LastGenOutput>
+      <Generator>TextTemplatingFileGenerator</Generator>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Src\Lib\CsProjectItemUtil.cs" />

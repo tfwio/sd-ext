@@ -116,18 +116,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Src\ColorMode.cs" />
-    <Compile Include="Src\MsDev2013Settings.cs">
-      <DependentUpon>MsDev2013_Theme.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Src\MsDev2013_T.cs">
-      <DependentUpon>MsDev2013_Theme.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Src\MsDev2013_Theme.cs" />
-    <Compile Include="Src\MsDev2013_Translator.cs">
-      <DependentUpon>MsDev2013_Theme.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Src\MsDev2013_Settings.cs" />
+    <Compile Include="Src\MsDev2013_Th.cs" />
     <Compile Include="Src\ThemeEx.cs" />
+    <Compile Include="Src\ThemeGen.cs" />
     <Compile Include="Src\ThemeSetting.cs" />
+    <Compile Include="Strings.Designer.cs">
+      <DependentUpon>Strings.resx</DependentUpon>
+    </Compile>
     <None Include="packages.config" />
     <Compile Include="Src\MsDev2010_Theme.cs" />
   </ItemGroup>
@@ -136,6 +132,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Src" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Strings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Strings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

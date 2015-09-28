@@ -27,7 +27,6 @@ namespace ThemeTool
       settings.SaveSettings(themeId);
     }
   }
-  
   public class ToolCommandDefault       : AbstractMenuCommand { public override void Run() { "default".Apply(); } }
   public class ToolCommandGeneric       : AbstractMenuCommand { public override void Run() { "generic".Apply(); } }
   public class ToolCommandAutumn        : AbstractMenuCommand { public override void Run() { "#FF800000".Apply(); } }
@@ -70,19 +69,17 @@ namespace ThemeTool
       {
 //        string path = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetAssembly(GetType()).Location);
 //        System.Reflection.Assembly.LoadFrom(System.IO.Path.Combine(path, "AvalonDock.Themes.dll"));
-        
         bw = new BackgroundWorker();
         bw.DoWork += delegate
         {
           try
           {
             // TODO: if i replace code below as compiler says (Warning CS0618: 'ICSharpCode.SharpDevelop.Gui.WorkbenchSingleton.MainWindow' is obsolete: 'Use SD.Workbench.MainWindow instead')
-            // i've got error on startup command (something about #D inner services)
             while (ICSharpCode.SharpDevelop.Gui.WorkbenchSingleton.MainWindow == null)
             {
               Thread.Sleep(100);
             }
-            ICSharpCode.SharpDevelop.Gui.WorkbenchSingleton.MainWindow.Dispatcher.Invoke
+            ICSharpCode.SharpDevelop.SD.Workbench.MainWindow.Dispatcher.Invoke
               (DispatcherPriority.Normal, new ThreadStart
                (
                  delegate

@@ -3,33 +3,6 @@ using System;
 using System.Windows.Media;
 namespace ThemeTool
 {
-  static public class poop
-  {
-    static public void Poop()
-    {
-      // var deserializer = new Deserializer();
-      var serializer = new YamlDotNet.Serialization.Serializer();
-      using (var writer = new System.IO.StringWriter())
-      {
-        using (var sfd=new System.Windows.Forms.SaveFileDialog(){Filter="YAML File|*.yml"})
-        {
-          var themeSettings = new MsDev2013SettingsCollection(){
-            Theme=new System.Collections.Generic.List<MsDev2013Settings>{
-              {MsDev2013Settings.FromTheme(MsDev2013_Theme.Apply_Blue())}
-            }
-          };
-          serializer.Serialize(writer,themeSettings,typeof(MsDev2013SettingsCollection));
-          var stringdata = writer.ToString();
-          if (sfd.ShowDialog()!=System.Windows.Forms.DialogResult.OK) return;
-          System.IO.File.WriteAllText(sfd.FileName,stringdata);
-        }
-      }
-      //namingConvention: new CamelCaseNamingConvention()
-      //      var nodes = new List<FaNode>();
-      //      IconSection precept = deserializer.Deserialize<IconSection>(Document);
-    }
-  }
-  
   public class MsDev2013SettingsCollection
   {
     [YamlDotNet.Serialization.YamlAliasAttribute("Theme")]
@@ -37,9 +10,59 @@ namespace ThemeTool
   }
   public class MsDev2013Settings
   {
+    public string Name                                          { get; set; }
+    public string DefaultFontSize                               { get; set; }
+    public string DefaultFontFamily                             { get; set; }
+    public string DotsDefault                                   { get; set; }
+    public string DotsActive                                    { get; set; }
+    public string DotsHover                                     { get; set; }
+    public string GeomBrush0                                    { get; set; }
+    public string GeomBrush1                                    { get; set; }
+    public string GeomBrush2                                    { get; set; }
+    public string DefaultBackgroundBrush                        { get; set; }
+    public string LightForegroundBrush                          { get; set; }
+    public string DarkForegroundBrush                           { get; set; }
+    public string ManagedContentTabControlNormalBorderBrush     { get; set; }
+    public string ManagedContentTabItemNormalBackground         { get; set; }
+    public string ManagedContentTabItemNormalForeground         { get; set; }
+    public string ManagedContentTabItemNormalBorderBrush        { get; set; }
+    public string ManagedContentTabItemInvNormalBackground      { get; set; }
+    public string ManagedContentTabItemInvHotBackground         { get; set; }
+    public string ManagedContentTabItemHotBackground            { get; set; }
+    public string ManagedContentTabItemHotBorderBrush           { get; set; }
+    public string ManagedContentTabItemSelectedBackground       { get; set; }
+    public string ManagedContentTabItemSelectedForeground       { get; set; }
+    public string ManagedContentTabItemSelectedBorderBackround  { get; set; }
+    public string ManagedContentTabItemSelectedBorderBrush      { get; set; }
+    public string ManagedContentTabItemDisabledForeground       { get; set; }
+    public string ManagedContentTabItemDisabledBackground       { get; set; }
+    public string ManagedContentTabItemDisabledBorderBrush      { get; set; }
+    public string DockablePaneTitleBackgroundSelected           { get; set; }
+    public string DockablePaneTitleBackground                   { get; set; }
+    public string DockablePaneTitleForeground                   { get; set; }
+    public string DockablePaneTitleForegroundSelected           { get; set; }
+    public string DocumentHeaderBackground                      { get; set; }
+    public string DocumentHeaderBackgroundSelected              { get; set; }
+    public string DocumentHeaderBackgroundSelectedActivated     { get; set; }
+    public string DocumentHeaderBackgroundMouseOver             { get; set; }
+    public string DocumentHeaderForeground                      { get; set; }
+    public string DocumentHeaderForegroundSelected              { get; set; }
+    public string DocumentHeaderForegroundSelectedActivated     { get; set; }
+    public string DocumentHeaderBorder                          { get; set; }
+    public string DocumentHeaderBorderSelected                  { get; set; }
+    public string DocumentHeaderBorderSelectedActivated         { get; set; }
+    public string DocumentHeaderBorderBrushMouseOver            { get; set; }
+    public string PaneHeaderCommandBorderBrush                  { get; set; }
+    public string PaneHeaderCommandBackground                   { get; set; }
+    public string OverlayWindowMainBorderBrush                  { get; set; }
+    public string OverlayWindowIntBorderBackground              { get; set; }
+    public string OverlayWindowIntBorderBrush                   { get; set; }
+    public string OverlayWindowIntBorderBrush2                  { get; set; }
+    public string OverlayWindowIntBorderBackground2             { get; set; }
+
     static public MsDev2013Settings FromTheme(MsDev2013_Theme theme)
     {
-      var tefaut = MsDev2013_Theme.Apply_Blue();
+      var tefaut = MsDev2013_Theme.Apply();
       var settings = new MsDev2013Settings();
       settings.Name                                          = (theme.Name                                          ?? tefaut.Name                                         );
       settings.DefaultFontSize                               = (theme.DefaultFontSize                               ?? tefaut.DefaultFontSize                              ).ToString();
@@ -90,11 +113,13 @@ namespace ThemeTool
       settings.OverlayWindowIntBorderBrush                   = (theme.OverlayWindowIntBorderBrush                   ?? tefaut.OverlayWindowIntBorderBrush                  ).ToHexString(true);
       settings.OverlayWindowIntBorderBrush2                  = (theme.OverlayWindowIntBorderBrush2                  ?? tefaut.OverlayWindowIntBorderBrush2                 ).ToHexString(true);
       settings.OverlayWindowIntBorderBackground2             = (theme.OverlayWindowIntBorderBackground2             ?? tefaut.OverlayWindowIntBorderBackground2            ).ToGradientStopString();
+
+      tefaut = null;
       return settings;
     }
     static public MsDev2013_Theme FromTheme(MsDev2013Settings theme)
     {
-      var tefaut = FromTheme(MsDev2013_Theme.Apply_Blue());
+      var tefaut = FromTheme(MsDev2013_Theme.Apply());
       var settings = new MsDev2013_Theme();
       settings.Name = (theme.Name ?? tefaut.Name);
       settings.DefaultFontSize = double.Parse(theme.DefaultFontSize ?? tefaut.DefaultFontSize);
@@ -145,59 +170,10 @@ namespace ThemeTool
       settings.OverlayWindowIntBorderBrush                   = (theme.OverlayWindowIntBorderBrush                   ?? tefaut.OverlayWindowIntBorderBrush                  ).ToColor();
       settings.OverlayWindowIntBorderBrush2                  = (theme.OverlayWindowIntBorderBrush2                  ?? tefaut.OverlayWindowIntBorderBrush2                 ).ToColor();
       settings.OverlayWindowIntBorderBackground2             = (theme.OverlayWindowIntBorderBackground2             ?? tefaut.OverlayWindowIntBorderBackground2            ).ToStops();
+
       tefaut = null;
       return settings;
     }
-    
-    public string Name                                          { get; set; }
-    public string DefaultFontSize                               { get; set; }
-    public string DefaultFontFamily                             { get; set; }
-    public string DotsDefault                                   { get; set; }
-    public string DotsActive                                    { get; set; }
-    public string DotsHover                                     { get; set; }
-    public string GeomBrush0                                    { get; set; }
-    public string GeomBrush1                                    { get; set; }
-    public string GeomBrush2                                    { get; set; }
-    public string DefaultBackgroundBrush                        { get; set; }
-    public string LightForegroundBrush                          { get; set; }
-    public string DarkForegroundBrush                           { get; set; }
-    public string ManagedContentTabControlNormalBorderBrush     { get; set; }
-    public string ManagedContentTabItemNormalBackground         { get; set; }
-    public string ManagedContentTabItemNormalForeground         { get; set; }
-    public string ManagedContentTabItemNormalBorderBrush        { get; set; }
-    public string ManagedContentTabItemInvNormalBackground      { get; set; }
-    public string ManagedContentTabItemInvHotBackground         { get; set; }
-    public string ManagedContentTabItemHotBackground            { get; set; }
-    public string ManagedContentTabItemHotBorderBrush           { get; set; }
-    public string ManagedContentTabItemSelectedBackground       { get; set; }
-    public string ManagedContentTabItemSelectedForeground       { get; set; }
-    public string ManagedContentTabItemSelectedBorderBackround  { get; set; }
-    public string ManagedContentTabItemSelectedBorderBrush      { get; set; }
-    public string ManagedContentTabItemDisabledForeground       { get; set; }
-    public string ManagedContentTabItemDisabledBackground       { get; set; }
-    public string ManagedContentTabItemDisabledBorderBrush      { get; set; }
-    public string DockablePaneTitleBackgroundSelected           { get; set; }
-    public string DockablePaneTitleBackground                   { get; set; }
-    public string DockablePaneTitleForeground                   { get; set; }
-    public string DockablePaneTitleForegroundSelected           { get; set; }
-    public string DocumentHeaderBackground                      { get; set; }
-    public string DocumentHeaderBackgroundSelected              { get; set; }
-    public string DocumentHeaderBackgroundSelectedActivated     { get; set; }
-    public string DocumentHeaderBackgroundMouseOver             { get; set; }
-    public string DocumentHeaderForeground                      { get; set; }
-    public string DocumentHeaderForegroundSelected              { get; set; }
-    public string DocumentHeaderForegroundSelectedActivated     { get; set; }
-    public string DocumentHeaderBorder                          { get; set; }
-    public string DocumentHeaderBorderSelected                  { get; set; }
-    public string DocumentHeaderBorderSelectedActivated         { get; set; }
-    public string DocumentHeaderBorderBrushMouseOver            { get; set; }
-    public string PaneHeaderCommandBorderBrush                  { get; set; }
-    public string PaneHeaderCommandBackground                   { get; set; }
-    public string OverlayWindowMainBorderBrush                  { get; set; }
-    public string OverlayWindowIntBorderBackground              { get; set; }
-    public string OverlayWindowIntBorderBrush                   { get; set; }
-    public string OverlayWindowIntBorderBrush2                  { get; set; }
-    public string OverlayWindowIntBorderBackground2             { get; set; }
   }
 }
 

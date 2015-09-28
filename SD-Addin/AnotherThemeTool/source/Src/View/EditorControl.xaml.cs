@@ -5,7 +5,6 @@ using System.Windows.Controls;
 
 using ICSharpCode.AvalonEdit.Highlighting;
 using ICSharpCode.SharpDevelop.Project;
-using AnotherThemeTool;
 using ThemeTool.Logic;
 
 namespace ThemeTool.View

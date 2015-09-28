@@ -81,7 +81,7 @@ namespace ThemeTool.Logic
         }
         else if (themeName == "dev2o13-dyn")
         {
-          MsDev2013_Theme.Apply_Blue();
+          MsDev2013_Theme.Apply();
           ThemeFactory.ChangeTheme(new Uri("/AnotherThemeTool;component/src/assets/dev2o13_dynamic.xaml", UriKind.RelativeOrAbsolute));
         }
         else if (themesClassic.Contains(themeName))

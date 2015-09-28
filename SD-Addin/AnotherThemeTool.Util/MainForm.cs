@@ -18,63 +18,36 @@ namespace TestThemeWriter
   /// </summary>
   public partial class MainForm : Form
   {
-    void button1_Click(object sender, EventArgs e)
-    {
-      ThemeTool.poop.Poop();
-    }
-    readonly SaveFileDialog SFD = new SaveFileDialog{Filter="YAML File|*.yml"};
+    //void button1_Click(object sender, EventArgs e)
+    //{
+    //  // var deserializer = new Deserializer();
+    //  var serializer = new YamlDotNet.Serialization.Serializer();
+    //  using (var writer = new System.IO.StringWriter())
+    //  {
+    //    using (var sfd=new System.Windows.Forms.SaveFileDialog(){Filter="YAML File|*.yml"})
+    //    {
+    //      var themeSettings = new MsDev2013SettingsCollection(){
+    //        Theme=new System.Collections.Generic.List<MsDev2013Settings>{
+    //          {MsDev2013Settings.FromTheme(MsDev2013_Theme.Apply_Blue())}
+    //        }
+    //      };
+    //      serializer.Serialize(writer,themeSettings,typeof(MsDev2013SettingsCollection));
+    //      var stringdata = writer.ToString();
+    //      if (sfd.ShowDialog()!=System.Windows.Forms.DialogResult.OK) return;
+    //      System.IO.File.WriteAllText(sfd.FileName,stringdata);
+    //    }
+    //  }
+    //  //namingConvention: new CamelCaseNamingConvention()
+    //  //      var nodes = new List<FaNode>();
+    //  //      IconSection precept = deserializer.Deserialize<IconSection>(Document);
+    //}
     
-    Func<ColourSetting,string> NodeToClassSetting  = (node) => string.Format("      public {1,-22} {0,-45} {{ get; set; }}", node.Name, node.TypeName);
-    Func<ColourSetting,string> NodeToClassTheme    = (node) => string.Format("      public string {0,-45} {{ get; set; }}", node.Name, node.TypeName);
-    Func<ColourSetting,string> NodeToString = (node) =>
-    {
-      switch (node.TypeName.ToLower()) {
-          case "string":     return (string.Format("settings.{0,-45} = (theme.{0,-45} ?? tefaut.{0,-45});", node.Name));
-          case "double":     return (string.Format("settings.{0,-45} = (theme.{0,-45} ?? tefaut.{0,-45}).ToString();", node.Name));
-          case "fontfamily": return (string.Format("settings.{0,-45} = (theme.{0,-45} ?? tefaut.{0,-45}).ToString();", node.Name));
-          case "color":      return (string.Format("settings.{0,-45} = (theme.{0,-45} ?? tefaut.{0,-45}).ToHexString(true);", node.Name));
-          case "gradientstopcollection": return (string.Format("settings.{0,-45} = (theme.{0,-45} ?? tefaut.{0,-45}).ToGradientStopString();", node.Name));
-          default: return null;
-      }
-    };
-    Func<ColourSetting,string> StringToNode = (node) =>
-    {
-      switch (node.TypeName.ToLower()) {
-          case "string": return (string.Format("settings.{0} = (theme.{0} ?? tefaut.{0});", node.Name));
-          case "fontfamily": return (string.Format("settings.{0} = new FontFamily((theme.{0} ?? tefaut.{0}).ToString());", node.Name));
-          case "double": return (string.Format("settings.{0} = double.Parse(theme.{0} ?? tefaut.{0});", node.Name));
-          case "color": return (string.Format("settings.{0,-45} = (theme.{0,-45} ?? tefaut.{0,-45}).ToColor();", node.Name));
-          case "gradientstopcollection": return (string.Format("settings.{0,-45} = (theme.{0,-45} ?? tefaut.{0,-45}).ToStops();", node.Name));
-          default: return null;
-      }
-    };
     
-    enum ExecuteMode { ThemeToString, StringToTheme, ClassData, ClassString, }
-    void Execute(ExecuteMode mode)
-    {
-      ThemeSetting setting = ThemeTool.ThemeSetting.Load(StringRes.MsDev2013_Theme);
-      using (var strw = new System.IO.StringWriter())
-      {
-        foreach (var node in setting.Elements)
-        {
-          string result = null;
-          switch (mode) {
-              case ExecuteMode.ThemeToString: result = NodeToString(node); break;
-              case ExecuteMode.StringToTheme: result = StringToNode(node); break;
-              case ExecuteMode.ClassString: result = NodeToClassTheme(node); break;
-              case ExecuteMode.ClassData: result = NodeToClassSetting(node); break;
-          }
-          if (!string.IsNullOrEmpty(result)) strw.WriteLine(result);
-        }
-        textBox2.Text = strw.ToString();
-      }
-    }
+    void GetThemeString(object sender, EventArgs args) { textBox2.Text = ThemeGen.Execute(ExecuteMode.ThemeToString); }
+    void GetThemeData(object sender, EventArgs args) { textBox2.Text = ThemeGen.Execute(ExecuteMode.StringToTheme); }
     
-    void GetThemeString(object sender, EventArgs args) { Execute(ExecuteMode.ThemeToString); }
-    void GetThemeData(object sender, EventArgs args) { Execute(ExecuteMode.StringToTheme); }
-    
-    void GetThemeClassData(object sender, EventArgs args) { Execute(ExecuteMode.ClassData); }
-    void GetThemeClassString(object sender, EventArgs args) { Execute(ExecuteMode.ClassString); }
+    void GetThemeClassData(object sender, EventArgs args) { textBox2.Text = ThemeGen.Execute(ExecuteMode.ClassData); }
+    void GetThemeClassString(object sender, EventArgs args) { textBox2.Text = ThemeGen.Execute(ExecuteMode.ClassString); }
     
     void GetDemoFile(object o, EventArgs e)
     {
