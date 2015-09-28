@@ -1,4 +1,4 @@
-﻿# PRELEASE: Another ThemeTool
+﻿# PRETHROW: Another ThemeTool
 
 This addin is an elaboration built upon [AlienJust/ThemeTool](https://github.com/AlienJust/ThemeTool) for SharpDevelop 4x and 5x.
 
@@ -19,7 +19,7 @@ This addin is an elaboration built upon [AlienJust/ThemeTool](https://github.com
 
 ## How to customize the theme
 
-- Export a theme file from the Tools-Memu.
+- Export a theme file from the Tools-Menu.
 - Import the theme back into SD through the same menu.
 - Open the file in a text editor
     - Incidentally, when you load the file in SharpDevelop's text-editor, it ignores changes for some reason... So you may as well use another text editor for now...
@@ -62,6 +62,6 @@ Sources are included from the following projects:
 - SharpDevelop 5/AvalonDock v1.3
 - AvalonDock.Themes (v1.3)
 - AlienJust/ThemeTool (sdaddin)
-    - https://github.com/AlienJust/ThemeTool/wiki
+    - see-also: https://github.com/AlienJust/ThemeTool/wiki
 - YamlDotNet (nuget)
 - FirstFloor.ModernUI (nuget)
