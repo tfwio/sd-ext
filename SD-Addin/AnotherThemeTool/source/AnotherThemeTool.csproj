@@ -148,9 +148,6 @@
     <Compile Include="Src\Lib\CsProjectItemSettings.cs">
       <DependentUpon>CsProjectItemUtil.cs</DependentUpon>
     </Compile>
-    <None Include="..\generate\make-sdaddin.cmd">
-      <Link>make-sdaddin.cmd</Link>
-    </None>
     <Compile Include="Src\MsDev2010_Blue.cs">
       <DependentUpon>MsDev2010_Theme.cs</DependentUpon>
     </Compile>
