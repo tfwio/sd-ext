@@ -12,12 +12,6 @@ Elements:
 - Name: DotsDefault
   TypeName: Color
   DefaultValue: 40FFFFFF
-- Name: DotsActive
-  TypeName: Color
-  DefaultValue: 40FFFFFF
-- Name: DotsHover
-  TypeName: Color
-  DefaultValue: 40FFFFFF
 - Name: GeomBrush0
   TypeName: Color
   DefaultValue: 35496A
@@ -53,7 +47,7 @@ Elements:
   DefaultValue: '4D6082,4D6082:1'
 - Name: ManagedContentTabItemInvHotBackground
   TypeName: GradientStopCollection
-  DefaultValue: '4D6082,FF00FF:1'
+  DefaultValue: '4D6082,4D6082:1'
 - Name: ManagedContentTabItemHotBackground
   TypeName: GradientStopCollection
   DefaultValue: '4D6082,4D6082:1'

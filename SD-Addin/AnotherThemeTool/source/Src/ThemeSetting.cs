@@ -69,6 +69,7 @@ namespace ThemeTool
     public string TypeName      { get; set; }
     public string DefaultValue  { get; set; }
     public string Comment       { get; set; }
+    public string Tags          { get; set; }
   }
 }
 

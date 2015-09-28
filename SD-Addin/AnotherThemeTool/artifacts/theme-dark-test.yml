@@ -3,8 +3,6 @@ Theme:
   DefaultFontSize: 14
   DefaultFontFamily: Roboto
   DotsDefault: '#59A8DE'
-  DotsActive: '#00000000'
-  DotsHover: '#00000000'
   GeomBrush0: '#FFFFFF'
   GeomBrush1: '#35496A'
   GeomBrush2: '#293955'

@@ -11,8 +11,6 @@ namespace ThemeTool
     public Double               ? DefaultFontSize                               { get; set; }
     public FontFamily             DefaultFontFamily                             { get; set; }
     public Color                ? DotsDefault                                   { get; set; }
-    public Color                ? DotsActive                                    { get; set; }
-    public Color                ? DotsHover                                     { get; set; }
     public Color                ? GeomBrush0                                    { get; set; }
     public Color                ? GeomBrush1                                    { get; set; }
     public Color                ? GeomBrush2                                    { get; set; }
@@ -71,8 +69,6 @@ namespace ThemeTool
       theme.Name                                         = "blue-default";
       theme.DefaultFontFamily                            = new FontFamily("Open Sans");
       theme.DefaultFontSize                              = 14;
-      theme.DotsActive                                   = "00000000".ToColor();
-      theme.DotsHover                                    = "00000000".ToColor();
       theme.DotsDefault                                  = "00000000".ToColor();
       theme.GeomBrush0                                   = "2C3D5A".ToColor(); // these three not used
       theme.GeomBrush1                                   = "35496A".ToColor();

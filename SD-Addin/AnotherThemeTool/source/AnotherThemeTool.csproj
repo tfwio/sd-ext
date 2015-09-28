@@ -229,18 +229,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Src\Assets\dev2010_blue.xaml" />
-    <Page Include="Src\Assets\dev2011.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Src\Assets\dev2o11.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Src\Assets\dev2o11v2.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Src\Assets\dev2o13.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Src\Assets\dev2o13_dynamic.xaml" />
     <Page Include="Src\Assets\ExpressionDark.xaml">
       <Generator>MSBuild:Compile</Generator>

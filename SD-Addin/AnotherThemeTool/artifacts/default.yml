@@ -3,8 +3,6 @@ Theme:
   DefaultFontSize: 14
   DefaultFontFamily: Open Sans
   DotsDefault: '#00000000'
-  DotsActive: '#00000000'
-  DotsHover: '#00000000'
   GeomBrush0: '#2C3D5A'
   GeomBrush1: '#35496A'
   GeomBrush2: '#293955'

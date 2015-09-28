@@ -31,16 +31,19 @@ namespace System
       }
     }
     
-    static public Func<ColourSetting, string> NodeToClassSetting = node => {
-//      string.Format("      public {1,-22} {0,-45} {{ get; set; }}", node.Name, node.TypeName);
+    static public Func<ColourSetting, string> NodeToClassSetting = (ColourSetting node) => {
       switch (node.TypeName.ToLower()) {
         case "gradientstopcollection":
         case "fontfamily":
         case "string":
-          return string.Format("    public {1,-22} {0,-45} {{ get; set; }}", node.Name, node.TypeName);
+          return string.Format(//"    // {2}\n" +
+                               //"    // Default: {3}\r\n" +
+                               "    public {1,-22} {0,-45} {{ get; set; }}", node.Name, node.TypeName, node.Comment,node.DefaultValue);
         case "color":
         case "double":
-          return string.Format("    public {1,-21}? {0,-45} {{ get; set; }}", node.Name, node.TypeName);
+          return string.Format(//"    // {2}\n" +
+                               //"    // Default: {3}\r\n" +
+                               "    public {1,-21}? {0,-45} {{ get; set; }}", node.Name, node.TypeName, node.Comment,node.DefaultValue);
         default:
           return null;
       }

@@ -1,15 +1,17 @@
 ﻿# PRETHROW: Another ThemeTool
 
+targets SharpDevelop 5.x (AvalonDock-1.3)
+
 This addin is an elaboration built upon [AlienJust/ThemeTool](https://github.com/AlienJust/ThemeTool) for SharpDevelop 4x and 5x.
+Is kind of a shot in the dark, made partly out of curiosity as to what kinds of challenges I might find in attempt (even if slightly,) to modernize the UI a bit.
+
+While there are screen-shots, there currently isn't an implementation which saves your setting for load-time after closing down SD and relaunching.
 
 ![](https://raw.githubusercontent.com/tfwio/sd-ext/0c9d644e1975e4bdc1ecdbdb031c3df0852beed4/SD-Addin/AnotherThemeTool/artifacts/screen-blue.png)
-
 
 ![](https://raw.githubusercontent.com/tfwio/sd-ext/0c9d644e1975e4bdc1ecdbdb031c3df0852beed4/SD-Addin/AnotherThemeTool/artifacts/screen-light.png)
 
 ![](https://raw.githubusercontent.com/tfwio/sd-ext/0c9d644e1975e4bdc1ecdbdb031c3df0852beed4/SD-Addin/AnotherThemeTool/artifacts/screen-dark.png)
-
-- This project targets SharpDevelop 5.x
 
 ## Features In Progress
 

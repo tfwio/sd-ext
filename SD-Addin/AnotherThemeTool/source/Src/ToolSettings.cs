@@ -49,16 +49,16 @@ namespace ThemeTool.Logic
       "classic","generic","luna.normalcolor","aero.normalcolor"
     };
     readonly Dictionary<string,string> themesDefault = new Dictionary<string,string>(){
-      { "dev2010.orig",    "/Mu;component/src/assets/dev2010.xaml" },
-      { "dev2010green",    "/Mu;component/src/assets/dev2010green.xaml" },
-      { "dev2010red",      "/Mu;component/src/assets/dev2010red.xaml" },
-      { "ExpressionDark" , "/Mu;component/src/assets/ExpressionDark.xaml" },
-      { "ExpressionLight", "/Mu;component/src/assets/ExpressionLight.xaml" },
+      { "dev2010.orig",    "/AnotherThemeTool;component/src/assets/dev2010.xaml" },
+      { "dev2010green",    "/AnotherThemeTool;component/src/assets/dev2010green.xaml" },
+      { "dev2010red",      "/AnotherThemeTool;component/src/assets/dev2010red.xaml" },
+      { "ExpressionDark" , "/AnotherThemeTool;component/src/assets/ExpressionDark.xaml" },
+      { "ExpressionLight", "/AnotherThemeTool;component/src/assets/ExpressionLight.xaml" },
     };
     readonly Dictionary<string,string> themesNew = new Dictionary<string,string>(){
-//      { "dev2010",   "/Mu;component/src/assets/dev2010_blue.xaml" },
-      { "dev2o11",   "/Mu;component/src/assets/dev2o11.xaml" },
-      { "dev2o11v2", "/Mu;component/src/assets/dev2o11v2.xaml" },
+//      { "dev2010",   "/AnotherThemeTool;component/src/assets/dev2010_blue.xaml" },
+      { "dev2o11",   "/AnotherThemeTool;component/src/assets/dev2o11.xaml" },
+      { "dev2o11v2", "/AnotherThemeTool;component/src/assets/dev2o11v2.xaml" },
     };
     public void SetTheme(string themeName)
     {

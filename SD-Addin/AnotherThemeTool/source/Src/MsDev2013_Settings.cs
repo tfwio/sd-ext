@@ -1,4 +1,6 @@
 ﻿/* oio * 4/5/2014 * Time: 5:46 AM */
+// Generated from: "$(projectdir)../artifacts/msdev2013theme.yaml"
+// Generated using ICSharpCode.TextTemplating.TextTemplatingHost
 using System;
 using System.Windows.Media;
 namespace ThemeTool
@@ -10,55 +12,54 @@ namespace ThemeTool
   }
   public class MsDev2013Settings
   {
-    public string Name                                          { get; set; }
-    public string DefaultFontSize                               { get; set; }
-    public string DefaultFontFamily                             { get; set; }
-    public string DotsDefault                                   { get; set; }
-    public string DotsActive                                    { get; set; }
-    public string DotsHover                                     { get; set; }
-    public string GeomBrush0                                    { get; set; }
-    public string GeomBrush1                                    { get; set; }
-    public string GeomBrush2                                    { get; set; }
-    public string DefaultBackgroundBrush                        { get; set; }
-    public string LightForegroundBrush                          { get; set; }
-    public string DarkForegroundBrush                           { get; set; }
-    public string ManagedContentTabControlNormalBorderBrush     { get; set; }
-    public string ManagedContentTabItemNormalBackground         { get; set; }
-    public string ManagedContentTabItemNormalForeground         { get; set; }
-    public string ManagedContentTabItemNormalBorderBrush        { get; set; }
-    public string ManagedContentTabItemInvNormalBackground      { get; set; }
-    public string ManagedContentTabItemInvHotBackground         { get; set; }
-    public string ManagedContentTabItemHotBackground            { get; set; }
-    public string ManagedContentTabItemHotBorderBrush           { get; set; }
-    public string ManagedContentTabItemSelectedBackground       { get; set; }
-    public string ManagedContentTabItemSelectedForeground       { get; set; }
-    public string ManagedContentTabItemSelectedBorderBackround  { get; set; }
-    public string ManagedContentTabItemSelectedBorderBrush      { get; set; }
-    public string ManagedContentTabItemDisabledForeground       { get; set; }
-    public string ManagedContentTabItemDisabledBackground       { get; set; }
-    public string ManagedContentTabItemDisabledBorderBrush      { get; set; }
-    public string DockablePaneTitleBackgroundSelected           { get; set; }
-    public string DockablePaneTitleBackground                   { get; set; }
-    public string DockablePaneTitleForeground                   { get; set; }
-    public string DockablePaneTitleForegroundSelected           { get; set; }
-    public string DocumentHeaderBackground                      { get; set; }
-    public string DocumentHeaderBackgroundSelected              { get; set; }
-    public string DocumentHeaderBackgroundSelectedActivated     { get; set; }
-    public string DocumentHeaderBackgroundMouseOver             { get; set; }
-    public string DocumentHeaderForeground                      { get; set; }
-    public string DocumentHeaderForegroundSelected              { get; set; }
-    public string DocumentHeaderForegroundSelectedActivated     { get; set; }
-    public string DocumentHeaderBorder                          { get; set; }
-    public string DocumentHeaderBorderSelected                  { get; set; }
-    public string DocumentHeaderBorderSelectedActivated         { get; set; }
-    public string DocumentHeaderBorderBrushMouseOver            { get; set; }
-    public string PaneHeaderCommandBorderBrush                  { get; set; }
-    public string PaneHeaderCommandBackground                   { get; set; }
-    public string OverlayWindowMainBorderBrush                  { get; set; }
-    public string OverlayWindowIntBorderBackground              { get; set; }
-    public string OverlayWindowIntBorderBrush                   { get; set; }
-    public string OverlayWindowIntBorderBrush2                  { get; set; }
-    public string OverlayWindowIntBorderBackground2             { get; set; }
+      public string Name                                          { get; set; }
+      public string DefaultFontSize                               { get; set; }
+      public string DefaultFontFamily                             { get; set; }
+      public string DotsDefault                                   { get; set; }
+      public string GeomBrush0                                    { get; set; }
+      public string GeomBrush1                                    { get; set; }
+      public string GeomBrush2                                    { get; set; }
+      public string DefaultBackgroundBrush                        { get; set; }
+      public string LightForegroundBrush                          { get; set; }
+      public string DarkForegroundBrush                           { get; set; }
+      public string ManagedContentTabControlNormalBorderBrush     { get; set; }
+      public string ManagedContentTabItemNormalBackground         { get; set; }
+      public string ManagedContentTabItemNormalForeground         { get; set; }
+      public string ManagedContentTabItemNormalBorderBrush        { get; set; }
+      public string ManagedContentTabItemInvNormalBackground      { get; set; }
+      public string ManagedContentTabItemInvHotBackground         { get; set; }
+      public string ManagedContentTabItemHotBackground            { get; set; }
+      public string ManagedContentTabItemHotBorderBrush           { get; set; }
+      public string ManagedContentTabItemSelectedBackground       { get; set; }
+      public string ManagedContentTabItemSelectedForeground       { get; set; }
+      public string ManagedContentTabItemSelectedBorderBackround  { get; set; }
+      public string ManagedContentTabItemSelectedBorderBrush      { get; set; }
+      public string ManagedContentTabItemDisabledForeground       { get; set; }
+      public string ManagedContentTabItemDisabledBackground       { get; set; }
+      public string ManagedContentTabItemDisabledBorderBrush      { get; set; }
+      public string DockablePaneTitleBackgroundSelected           { get; set; }
+      public string DockablePaneTitleBackground                   { get; set; }
+      public string DockablePaneTitleForeground                   { get; set; }
+      public string DockablePaneTitleForegroundSelected           { get; set; }
+      public string DocumentHeaderBackground                      { get; set; }
+      public string DocumentHeaderBackgroundSelected              { get; set; }
+      public string DocumentHeaderBackgroundSelectedActivated     { get; set; }
+      public string DocumentHeaderBackgroundMouseOver             { get; set; }
+      public string DocumentHeaderForeground                      { get; set; }
+      public string DocumentHeaderForegroundSelected              { get; set; }
+      public string DocumentHeaderForegroundSelectedActivated     { get; set; }
+      public string DocumentHeaderBorder                          { get; set; }
+      public string DocumentHeaderBorderSelected                  { get; set; }
+      public string DocumentHeaderBorderSelectedActivated         { get; set; }
+      public string DocumentHeaderBorderBrushMouseOver            { get; set; }
+      public string PaneHeaderCommandBorderBrush                  { get; set; }
+      public string PaneHeaderCommandBackground                   { get; set; }
+      public string OverlayWindowMainBorderBrush                  { get; set; }
+      public string OverlayWindowIntBorderBackground              { get; set; }
+      public string OverlayWindowIntBorderBrush                   { get; set; }
+      public string OverlayWindowIntBorderBrush2                  { get; set; }
+      public string OverlayWindowIntBorderBackground2             { get; set; }
+
 
     static public MsDev2013Settings FromTheme(MsDev2013_Theme theme)
     {
@@ -68,8 +69,6 @@ namespace ThemeTool
       settings.DefaultFontSize                               = (theme.DefaultFontSize                               ?? tefaut.DefaultFontSize                              ).ToString();
       settings.DefaultFontFamily                             = (theme.DefaultFontFamily                             ?? tefaut.DefaultFontFamily                            ).ToString();
       settings.DotsDefault                                   = (theme.DotsDefault                                   ?? tefaut.DotsDefault                                  ).ToHexString(true);
-      settings.DotsActive                                    = (theme.DotsActive                                    ?? tefaut.DotsActive                                   ).ToHexString(true);
-      settings.DotsHover                                     = (theme.DotsHover                                     ?? tefaut.DotsHover                                    ).ToHexString(true);
       settings.GeomBrush0                                    = (theme.GeomBrush0                                    ?? tefaut.GeomBrush0                                   ).ToHexString(true);
       settings.GeomBrush1                                    = (theme.GeomBrush1                                    ?? tefaut.GeomBrush1                                   ).ToHexString(true);
       settings.GeomBrush2                                    = (theme.GeomBrush2                                    ?? tefaut.GeomBrush2                                   ).ToHexString(true);
@@ -125,8 +124,6 @@ namespace ThemeTool
       settings.DefaultFontSize = double.Parse(theme.DefaultFontSize ?? tefaut.DefaultFontSize);
       settings.DefaultFontFamily = new FontFamily((theme.DefaultFontFamily ?? tefaut.DefaultFontFamily).ToString());
       settings.DotsDefault                                   = (theme.DotsDefault                                   ?? tefaut.DotsDefault                                  ).ToColor();
-      settings.DotsActive                                    = (theme.DotsActive                                    ?? tefaut.DotsActive                                   ).ToColor();
-      settings.DotsHover                                     = (theme.DotsHover                                     ?? tefaut.DotsHover                                    ).ToColor();
       settings.GeomBrush0                                    = (theme.GeomBrush0                                    ?? tefaut.GeomBrush0                                   ).ToColor();
       settings.GeomBrush1                                    = (theme.GeomBrush1                                    ?? tefaut.GeomBrush1                                   ).ToColor();
       settings.GeomBrush2                                    = (theme.GeomBrush2                                    ?? tefaut.GeomBrush2                                   ).ToColor();

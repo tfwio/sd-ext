@@ -30,12 +30,12 @@
 	    <MenuItem type="Separator" />
   		<MenuItem id="PgImport" label="FontSize Increase" shortcut="Ctrl|+" />
   		<MenuItem id="PgImport" label="FontSize Decrease" shortcut="Ctrl|-" />
-			-->
 	    <MenuItem type="Separator" />
   		<MenuItem id="PgImport" label="Import PropertyGrid Settings" />
   		<MenuItem id="PgExport" label="Export PropertyGrid Settings" />
 			<MenuItem type="Separator" />
   		<MenuItem id="TestImportAgain" label="Reload Custom Theme" class="ThemeTool.Commands.ReloadLastTheme" />
+			-->
 	  </MenuItem>
 	  
 	  <MenuItem id="ThemeToolsRoot" label="Theme Tool" type="Menu">
