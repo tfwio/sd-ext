@@ -4,6 +4,8 @@ This addin is an elaboration built upon [AlienJust/ThemeTool](https://github.com
 
 ![](https://raw.githubusercontent.com/tfwio/sd-ext/0c9d644e1975e4bdc1ecdbdb031c3df0852beed4/SD-Addin/AnotherThemeTool/artifacts/screen-blue.png)
 
+See: [/SD-Addin/AnotherThemeTool/artifacts/theme-default.yml](https://github.com/tfwio/sd-ext/blob/63a7d78e40af34f14e615fad6122db2269ebedf8/SD-Addin/AnotherThemeTool/artifacts/theme-default.yml)
+
 ![](https://raw.githubusercontent.com/tfwio/sd-ext/0c9d644e1975e4bdc1ecdbdb031c3df0852beed4/SD-Addin/AnotherThemeTool/artifacts/screen-light.png)
 
 ![](https://raw.githubusercontent.com/tfwio/sd-ext/0c9d644e1975e4bdc1ecdbdb031c3df0852beed4/SD-Addin/AnotherThemeTool/artifacts/screen-dark.png)
