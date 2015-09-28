@@ -14,7 +14,7 @@ This addin is an elaboration built upon [AlienJust/ThemeTool](https://github.com
 
 - The dev2010 theme was modified slightly
     - Inspired by Dev2013 theme for AvalonDock-3.0
-    - Color settings are now dynmic, which allows you to customize.
+    - Color settings are now 'dynamic', which allows you to customize.
     - Theme settings are stored in YAML setting files.
 
 ## How to customize the theme
