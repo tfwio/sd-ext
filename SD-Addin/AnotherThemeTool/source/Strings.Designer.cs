@@ -170,41 +170,5 @@ namespace AnotherThemeTool {
         return ResourceManager.GetString("TagLink", resourceCulture);
       }
     }
-    
-    /// <summary>
-    ///   Looks up a localized string similar to 
-    ///&lt;div class=&apos;xpopup&apos;&gt;
-    ///
-    ///	&lt;span style=&apos;float:right&apos;&gt;&lt;input pickupid=&apos;{Pickup_ID}&apos; type=&apos;button&apos; value=&apos;edit&apos; id=&apos;editbutton&apos; /&gt;&lt;/span&gt;
-    ///	
-    ///	&lt;div class=&apos;addr&apos; style=&apos;float:left&apos;&gt;
-    ///		&lt;font size=&apos;4&apos;&gt;&lt;b&gt;{Pickup_Name}&lt;/b&gt;&lt;/font&gt;&lt;br /&gt;
-    ///		&lt;font size=&apos;1&apos;&gt;{addrStreet} {addrSuite}&lt;br /&gt;
-    ///		{addrCity} {addrState} {addrZip}&lt;/font&gt;
-    ///    &lt;/div&gt;
-    ///    
-    ///    &lt;div class=&apos;phone&apos; style=&apos;float:left;&apos;&gt;
-    ///		&lt;table style=&apos;border-collapse: collapse; min-width:120px;&apos;&gt;
-    ///			&lt;tr&gt;&lt;td&gt;{Phone_1}&lt;/td&gt;&lt;/tr&gt;
-    ///			&lt;tr&gt;&lt;td&gt;{Phone_2}&lt;/td&gt;&lt;/tr&gt; [rest of string was truncated]&quot;;.
-    /// </summary>
-    internal static string TestRow_Value {
-      get {
-        return ResourceManager.GetString("TestRow:Value", resourceCulture);
-      }
-    }
-    
-    /// <summary>
-    ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot;?&gt;
-    ///&lt;config xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;
-    ///  &lt;file-data&gt;D:\DEV\DATA\schema\Prime\prime.data.main.xdata&lt;/file-data&gt;
-    ///  &lt;file-template&gt;D:\DEV\DATA\schema\Prime\NewPrimeTemplates4N.xtpl&lt;/file-template&gt;
-    ///&lt;/config&gt;.
-    /// </summary>
-    internal static string XmlFile {
-      get {
-        return ResourceManager.GetString("XmlFile", resourceCulture);
-      }
-    }
   }
 }
