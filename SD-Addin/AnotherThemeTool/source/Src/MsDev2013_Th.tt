@@ -16,7 +16,6 @@ namespace ThemeTool
   public class <#=ThemeID#>
   {
     static public <#=ThemeID#> Instance = Apply();
-
 <#= ThemeGen.Execute(ExecuteMode.ClassData, ThemeData) #>
     
     static public <#=ThemeID#> Apply()

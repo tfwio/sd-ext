@@ -23,8 +23,9 @@ namespace ThemeTool
     static public void Apply(this string themeId)
     {
       var settings = new ThemeTool.Logic.ToolSettings();
-      settings.SetTheme(themeId);
-      settings.SaveSettings(themeId);
+      var theme = new MsDev2013_Theme{ ResourceID=themeId };
+      settings.SetTheme(theme);
+      settings.SaveSettings(theme);
     }
   }
   public class ToolCommandDefault       : AbstractMenuCommand { public override void Run() { "default".Apply(); } }
@@ -44,22 +45,22 @@ namespace ThemeTool
   public class ToolCommandDev10Red      : AbstractMenuCommand { public override void Run() { "dev2010red".Apply(); } }
   public class ToolCommandExpressDark   : AbstractMenuCommand { public override void Run() { "ExpressionDark".Apply(); } }
   public class ToolCommandExpressLight  : AbstractMenuCommand { public override void Run() { "ExpressionLight".Apply(); } }
-  public class ToolCommandCustom : AbstractMenuCommand
-  {
-    public override void Run()
-    {
-      var colorDialog = new ColorDialog();
-      var result = colorDialog.ShowDialog();
-      if (result == DialogResult.OK)
-      {
-        var color = colorDialog.Color;
-        string clrStr = "#" + color.ToArgb().ToString("X8");
-        var settings = new ToolSettings();
-        settings.SetTheme(clrStr);
-        settings.SaveSettings(clrStr);
-      }
-    }
-  }
+//  public class ToolCommandCustom : AbstractMenuCommand
+//  {
+//    public override void Run()
+//    {
+//      var colorDialog = new ColorDialog();
+//      var result = colorDialog.ShowDialog();
+//      if (result == DialogResult.OK)
+//      {
+//        var color = colorDialog.Color;
+//        string clrStr = "#" + color.ToArgb().ToString("X8");
+//        var settings = new ToolSettings();
+//        settings.SetTheme(clrStr);
+//        settings.SaveSettings(clrStr);
+//      }
+//    }
+//  }
   public class ToolCommandStartup : AbstractMenuCommand
   {
     public BackgroundWorker bw;
@@ -85,8 +86,9 @@ namespace ThemeTool
                  delegate
                  {
                    var settings = new ToolSettings();
-                   var theme = settings.LoadSettings();
-                   settings.SetTheme(theme);
+                   var m = settings.LoadSettings();
+                   var t = m.Theme[0];
+                   settings.SetTheme(t.ToTheme());
                  }
                 )
               );

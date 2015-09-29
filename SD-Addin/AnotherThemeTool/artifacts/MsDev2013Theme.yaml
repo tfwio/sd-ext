@@ -1,5 +1,8 @@
 ThemeName: MsDev2013
 Elements:
+- Name: ResourceID
+  TypeName: string
+  DefaultValue: msdev2013-dyn
 - Name: Name
   TypeName: string
   DefaultValue: blue-default

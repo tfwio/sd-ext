@@ -22,6 +22,12 @@
     <SevenZ>$(SevenZPath)\7z.exe</SevenZ>
     <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
     <TargetFrameworkProfile />
+    <SignAssembly>False</SignAssembly>
+    <AssemblyOriginatorKeyFile>AnotherThemeTool.snk</AssemblyOriginatorKeyFile>
+    <DelaySign>False</DelaySign>
+    <AssemblyOriginatorKeyMode>File</AssemblyOriginatorKeyMode>
+    <RunCodeAnalysis>False</RunCodeAnalysis>
+    <SourceAnalysisOverrideSettingsFile>C:\Users\tfwxo\AppData\Roaming\ICSharpCode\SharpDevelop5\Settings.SourceAnalysis</SourceAnalysisOverrideSettingsFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -38,6 +44,7 @@
     <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
+    <StartAction>Project</StartAction>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -112,21 +119,25 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Src\ColorMode.cs">
-      <DependentUpon>ThemeSetting.cs</DependentUpon>
-    </Compile>
     <Compile Include="Src\Commands\ExportMsDev2013Theme.cs" />
     <Compile Include="Src\Commands\ImportMsDev2013Theme.cs" />
     <Compile Include="Src\Commands\ShowImportUtilityControl.cs" />
+    <Compile Include="Src\Commands\ThemeTool.cs" />
+    <Compile Include="Src\Commands\ToolSettings.cs">
+      <DependentUpon>ThemeTool.cs</DependentUpon>
+    </Compile>
     <Compile Include="Src\MsDev2013_Settings.cs">
       <DependentUpon>MsDev2013_Settings.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Src\ThemeGen2.cs">
+      <DependentUpon>ThemeGen2.tt</DependentUpon>
       <AutoGen>True</AutoGen>
     </Compile>
     <None Include="Src\MsDev2013_Settings.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>MsDev2013_Settings.cs</LastGenOutput>
     </None>
-    <None Include="Src\MsDev2013_Theme.cs" />
     <Compile Include="Src\MsDev2013_Th.cs">
       <DependentUpon>MsDev2013_Th.tt</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -156,11 +167,6 @@
       <DependentUpon>MsDev2010_Theme.cs</DependentUpon>
     </Compile>
     <Compile Include="Src\MsDev2010_Theme.cs" />
-    <Compile Include="Src\MsDev2013_Blue.cs" />
-    <Compile Include="Src\ThemeTool.cs" />
-    <Compile Include="Src\ToolSettings.cs">
-      <DependentUpon>ThemeTool.cs</DependentUpon>
-    </Compile>
     <Compile Include="Src\View\EditorControl.xaml.cs">
       <DependentUpon>EditorControl.xaml</DependentUpon>
     </Compile>
@@ -173,6 +179,10 @@
     <None Include="Src\MsDev2013_Th.tt">
       <LastGenOutput>MsDev2013_Th.cs</LastGenOutput>
       <Generator>TextTemplatingFileGenerator</Generator>
+    </None>
+    <None Include="Src\ThemeGen2.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ThemeGen2.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>

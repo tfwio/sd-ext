@@ -115,11 +115,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Src\ColorMode.cs" />
     <Compile Include="Src\MsDev2013_Settings.cs" />
     <Compile Include="Src\MsDev2013_Th.cs" />
     <Compile Include="Src\ThemeEx.cs" />
     <Compile Include="Src\ThemeGen.cs" />
+    <Compile Include="Src\ThemeGen2.cs">
+      <AutoGen>True</AutoGen>
+    </Compile>
     <Compile Include="Src\ThemeSetting.cs" />
     <Compile Include="Strings.Designer.cs">
       <DependentUpon>Strings.resx</DependentUpon>

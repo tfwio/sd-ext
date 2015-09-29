@@ -1,20 +1,20 @@
 Theme:
 - Name: blue-default
-  DefaultFontSize: 13
+  DefaultFontSize: 18
   DefaultFontFamily: Segoe UI
   DotsDefault: '#80FFFFFF'
   GeomBrush0: '#2C3D5A'
   GeomBrush1: '#35496A'
   GeomBrush2: '#293955'
   DefaultBackgroundBrush: '#293955'
-  LightForegroundBrush: '#1e3660'
+  LightForegroundBrush: '#000000'
   DarkForegroundBrush: '#000000'
   ManagedContentTabControlNormalBorderBrush: '#4D6082'
   ManagedContentTabItemNormalBackground: '#4D6082'
   ManagedContentTabItemNormalForeground: '#4D6082'
   ManagedContentTabItemNormalBorderBrush: '#4D6082'
   ManagedContentTabItemInvNormalBackground: '#4D6082,#4D6082:1'
-  ManagedContentTabItemInvHotBackground: '#4D6082,#4D6082:1'
+  ManagedContentTabItemInvHotBackground: '#4D6082,#FF00FF:1'
   ManagedContentTabItemHotBackground: '#4D6082,#4D6082:1'
   ManagedContentTabItemHotBorderBrush: '#FFFFFF'
   ManagedContentTabItemSelectedBackground: '#FFFFFF'

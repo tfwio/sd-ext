@@ -6,7 +6,7 @@ namespace ThemeTool
   public class MsDev2013_Theme
   {
     static public MsDev2013_Theme Instance = Apply();
-
+    public string                 ResourceID                                    { get; set; }
     public string                 Name                                          { get; set; }
     public Double               ? DefaultFontSize                               { get; set; }
     public FontFamily             DefaultFontFamily                             { get; set; }
@@ -67,6 +67,7 @@ namespace ThemeTool
       // Color CommonActiveTabHover                      = "5B7199".ToColor();
       // Color CommonActiveTabBorder                     = "8E9BBC".ToColor();
       theme.Name                                         = "blue-default";
+      theme.ResourceID                                   = "dev2o13-dyn";
       theme.DefaultFontFamily                            = new FontFamily("Open Sans");
       theme.DefaultFontSize                              = 14;
       theme.DotsDefault                                  = "00000000".ToColor();

@@ -7,12 +7,8 @@
  * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
 using System;
-using System.Timers;
 using System.Windows.Threading;
-using ICSharpCode.AvalonEdit.Document;
 using ICSharpCode.Core;
-using ICSharpCode.SharpDevelop.Workbench;
-using ThemeTool.View;
 namespace ThemeTool.Commands
 {
   public class ImportMsDev2013Theme : AbstractMenuCommand
@@ -20,6 +16,7 @@ namespace ThemeTool.Commands
     internal static System.IO.FileSystemWatcher watcher;
     internal static System.Windows.Forms.OpenFileDialog OFD =
       new System.Windows.Forms.OpenFileDialog() { Filter = "YAML File|*.yml" };
+    
     internal static System.IO.FileInfo Info { get; set; }
     
     internal void watcher_Changed(object sender, System.IO.FileSystemEventArgs e)
@@ -49,23 +46,25 @@ namespace ThemeTool.Commands
     {
       System.Threading.Thread.Sleep(900);
       var data = System.IO.File.ReadAllText(Info.FullName);
-      using (var reader = new System.IO.StringReader(data))
-      {
-        var deserializer = new YamlDotNet.Serialization.Deserializer(ignoreUnmatched:false);
-        try {
-          var settingCollection = deserializer.Deserialize<MsDev2013SettingsCollection>(reader);
-          MsDev2013_Theme.Instance = MsDev2013Settings.FromTheme(settingCollection.Theme[0]);
-          AvalonDock.ThemeFactory.ChangeTheme(new Uri("/AnotherThemeTool;component/src/assets/dev2o13_dynamic.xaml",UriKind.RelativeOrAbsolute));
-          settingCollection = null;
-        } catch (Exception err) {
-          System.Windows.MessageBox.Show(
-            err.ToString(),
-            "Error",
-            System.Windows.MessageBoxButton.OK,
-            System.Windows.MessageBoxImage.Error);
-        }
+      var theme = ThemeGen.Load2013Theme(Info,0);
+      MsDev2013_Theme.Instance = theme;
+      try {
+        AvalonDock.ThemeFactory.ChangeTheme(new Uri("/AnotherThemeTool;component/src/assets/dev2o13_dynamic.xaml",UriKind.RelativeOrAbsolute));
+        var settings = new ThemeTool.Logic.ToolSettings();
+        settings.SaveSettings(theme);
+      } catch (Exception err) {
+        System.Windows.MessageBox.Show(
+          err.ToString(),
+          "Error",
+          System.Windows.MessageBoxButton.OK,
+          System.Windows.MessageBoxImage.Error);
       }
     }
+    
+    /// <summary>
+    /// Sets our (FileInfo) <see cref="Info">Info</see> property.
+    /// </summary>
+    // disable once MemberCanBeMadeStatic.Local
     internal bool DoDialog()
     {
       var result= OFD.ShowDialog() == System.Windows.Forms.DialogResult.OK;

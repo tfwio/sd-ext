@@ -23,22 +23,6 @@ namespace ThemeTool
   {
 <#= ThemeGen.Execute(ExecuteMode.ClassString,ThemeData)#>
 
-    static public MsDev2013Settings FromTheme(MsDev2013_Theme theme)
-    {
-      var tefaut = MsDev2013_Theme.Apply();
-      var settings = new MsDev2013Settings();
-<#= ThemeGen.Execute(ExecuteMode.ThemeToString,ThemeData)#>
-      tefaut = null;
-      return settings;
-    }
-    static public MsDev2013_Theme FromTheme(MsDev2013Settings theme)
-    {
-      var tefaut = FromTheme(MsDev2013_Theme.Apply());
-      var settings = new MsDev2013_Theme();
-<#=ThemeGen.Execute(ExecuteMode.StringToTheme,ThemeData)#>
-      tefaut = null;
-      return settings;
-    }
   }
 }
 
