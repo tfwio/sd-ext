@@ -61,7 +61,7 @@ namespace ThemeTool.View
 					IncludeLinks   = false,
 					ProjectPath    = System.IO.Path.Combine(selectedprojt.Directory,selectedprojt.FileName)
 				});
-			this.editor.Text = Strings.ItemGroupElement
+			this.editor.Text = AnotherThemeTool.Strings.ItemGroupElement
 				.Replace("@{nodes}",util.SerializeLinks());
 		}
 		
@@ -75,7 +75,6 @@ namespace ThemeTool.View
 			}
 			catch
 			{
-				
 			}
 		}
 

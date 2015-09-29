@@ -16,12 +16,6 @@ namespace ThemeTool
     
     public System.Collections.Generic.List<ColourSetting> Elements { get; set; }
 
-    static public ThemeSetting Load(System.IO.FileInfo Info)
-    {
-      if (!Info.Exists) return null;
-      var data = System.IO.File.ReadAllText(Info.FullName);
-      return Load(data);
-    }
     static public ThemeSetting Load(string input)
     {
       ThemeSetting result = null;
@@ -41,7 +35,7 @@ namespace ThemeTool
       return result;
     }
 
-    static public void Save(ThemeSetting input, System.IO.FileInfo Info)
+    static void Save(ThemeSetting input, System.IO.FileInfo Info)
     {
       var stringdata = Save(input);
       System.IO.File.WriteAllText(Info.FullName, stringdata);

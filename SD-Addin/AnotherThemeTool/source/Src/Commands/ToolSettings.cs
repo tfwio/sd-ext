@@ -56,8 +56,6 @@ namespace ThemeTool.Logic
       try
       {
         SaveSettings(new MsDev2013_Theme{ResourceID = themeName});
-        //using (var sw = new StreamWriter(Path.Combine(AssemblyFolderName, SettingsFileName)))
-        //  sw.WriteLine(themeName);
       }
       catch (Exception ex)
       {
@@ -67,8 +65,6 @@ namespace ThemeTool.Logic
     
     public void SetTheme(MsDev2013_Theme themeName)
     {
-      // This should be using a theme setting to apply the resource name
-      // provided in the particular setting.
       try
       {
         if (themesDefault.ContainsKey(themeName.ResourceID))
@@ -82,6 +78,11 @@ namespace ThemeTool.Logic
         else if (themeName.ResourceID == "dev2o13-dyn")
         {
           MsDev2013_Theme.Instance = themeName;
+          ThemeFactory.ChangeTheme(new Uri("/AnotherThemeTool;component/src/assets/dev2o13_dynamic.xaml", UriKind.RelativeOrAbsolute));
+        }
+        else if (themeName.ResourceID == "dev2o13-blue")
+        {
+          MsDev2013_Theme.Instance = MsDev2013_Theme.Apply();
           ThemeFactory.ChangeTheme(new Uri("/AnotherThemeTool;component/src/assets/dev2o13_dynamic.xaml", UriKind.RelativeOrAbsolute));
         }
         else if (themesClassic.Contains(themeName.ResourceID))

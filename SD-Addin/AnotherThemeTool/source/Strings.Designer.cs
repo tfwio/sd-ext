@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ThemeTool {
+namespace AnotherThemeTool {
   using System;
   
   
@@ -22,7 +22,7 @@ namespace ThemeTool {
   [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-  internal class Strings {
+  public class Strings {
     
     private static global::System.Resources.ResourceManager resourceMan;
     
@@ -36,10 +36,10 @@ namespace ThemeTool {
     ///   Returns the cached ResourceManager instance used by this class.
     /// </summary>
     [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-    internal static global::System.Resources.ResourceManager ResourceManager {
+    public static global::System.Resources.ResourceManager ResourceManager {
       get {
         if (object.ReferenceEquals(resourceMan, null)) {
-          global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ThemeTool.Strings", typeof(Strings).Assembly);
+          global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("AnotherThemeTool.Strings", typeof(Strings).Assembly);
           resourceMan = temp;
         }
         return resourceMan;
@@ -51,7 +51,7 @@ namespace ThemeTool {
     ///   resource lookups using this strongly typed resource class.
     /// </summary>
     [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-    internal static global::System.Globalization.CultureInfo Culture {
+    public static global::System.Globalization.CultureInfo Culture {
       get {
         return resourceCulture;
       }
@@ -66,7 +66,7 @@ namespace ThemeTool {
     ///	&lt;/Compile&gt;
     ///.
     /// </summary>
-    internal static string CompileElement0 {
+    public static string CompileElement0 {
       get {
         return ResourceManager.GetString("CompileElement0", resourceCulture);
       }
@@ -78,7 +78,7 @@ namespace ThemeTool {
     ///	&lt;/Compile&gt;
     ///.
     /// </summary>
-    internal static string CompileElement1 {
+    public static string CompileElement1 {
       get {
         return ResourceManager.GetString("CompileElement1", resourceCulture);
       }
@@ -90,7 +90,7 @@ namespace ThemeTool {
     ///            &lt;Link&gt;{fname:pre}\{fname}&lt;/Link&gt;{vals}
     ///        &lt;/{tag}&gt;.
     /// </summary>
-    internal static string CompileElement2 {
+    public static string CompileElement2 {
       get {
         return ResourceManager.GetString("CompileElement2", resourceCulture);
       }
@@ -99,7 +99,7 @@ namespace ThemeTool {
     /// <summary>
     ///   Looks up a localized string similar to Argument ‘{0}’ as allready been added to the Dictionary..
     /// </summary>
-    internal static string DictionaryList_ErrorMessage {
+    public static string DictionaryList_ErrorMessage {
       get {
         return ResourceManager.GetString("DictionaryList_ErrorMessage", resourceCulture);
       }
@@ -108,7 +108,7 @@ namespace ThemeTool {
     /// <summary>
     ///   Looks up a localized string similar to DictionaryList Usage Error.
     /// </summary>
-    internal static string DictionaryList_ErrorMessage_Title {
+    public static string DictionaryList_ErrorMessage_Title {
       get {
         return ResourceManager.GetString("DictionaryList_ErrorMessage_Title", resourceCulture);
       }
@@ -117,7 +117,7 @@ namespace ThemeTool {
     /// <summary>
     ///   Looks up a localized string similar to &lt;error Message=&quot;You probably need to select a project.&quot; /&gt;.
     /// </summary>
-    internal static string ErrorSelectAProject {
+    public static string ErrorSelectAProject {
       get {
         return ResourceManager.GetString("ErrorSelectAProject", resourceCulture);
       }
@@ -127,7 +127,7 @@ namespace ThemeTool {
     ///   Looks up a localized string similar to 
     ///            &lt;{0}&gt;{1}&lt;/{0}&gt;.
     /// </summary>
-    internal static string FormatTag0 {
+    public static string FormatTag0 {
       get {
         return ResourceManager.GetString("FormatTag0", resourceCulture);
       }
@@ -138,7 +138,7 @@ namespace ThemeTool {
     ///    &lt;/ItemGroup&gt;
     ///.
     /// </summary>
-    internal static string ItemGroupElement {
+    public static string ItemGroupElement {
       get {
         return ResourceManager.GetString("ItemGroupElement", resourceCulture);
       }
@@ -147,7 +147,7 @@ namespace ThemeTool {
     /// <summary>
     ///   Looks up a localized string similar to No Project!.
     /// </summary>
-    internal static string MsgNoProject {
+    public static string MsgNoProject {
       get {
         return ResourceManager.GetString("MsgNoProject", resourceCulture);
       }
@@ -156,7 +156,7 @@ namespace ThemeTool {
     /// <summary>
     ///   Looks up a localized string similar to DependentUpon.
     /// </summary>
-    internal static string TagDependentUpon {
+    public static string TagDependentUpon {
       get {
         return ResourceManager.GetString("TagDependentUpon", resourceCulture);
       }
@@ -165,7 +165,7 @@ namespace ThemeTool {
     /// <summary>
     ///   Looks up a localized string similar to Link.
     /// </summary>
-    internal static string TagLink {
+    public static string TagLink {
       get {
         return ResourceManager.GetString("TagLink", resourceCulture);
       }
@@ -198,7 +198,7 @@ namespace ThemeTool {
     ///- Name: GeomBrush1
     ///  TypeN [rest of string was truncated]&quot;;.
     /// </summary>
-    internal static string YamlThemeSchema {
+    public static string YamlThemeSchema {
       get {
         return ResourceManager.GetString("YamlThemeSchema", resourceCulture);
       }

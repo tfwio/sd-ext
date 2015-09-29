@@ -11,7 +11,7 @@ namespace System
 
     static public string Execute(ExecuteMode mode, string text=null)
     {
-      ThemeSetting setting = ThemeTool.ThemeSetting.Load(text ?? Strings.YamlThemeSchema);
+      ThemeSetting setting = ThemeTool.ThemeSetting.Load(text ?? AnotherThemeTool.Strings.YamlThemeSchema);
       
       using (var strw = new System.IO.StringWriter())
       {

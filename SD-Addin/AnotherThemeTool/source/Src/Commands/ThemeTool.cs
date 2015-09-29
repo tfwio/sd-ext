@@ -35,7 +35,7 @@ namespace ThemeTool
   public class ToolCommandClassic       : AbstractMenuCommand { public override void Run() { "classic".Apply(); } }
   public class ToolCommandAero          : AbstractMenuCommand { public override void Run() { "aero.normalcolor".Apply(); } }
   public class ToolCommandLuna          : AbstractMenuCommand { public override void Run() { "luna.normalcolor".Apply(); } }
-  public class ThemeToolCommandDev13    : AbstractMenuCommand { public override void Run() { "dev2o13".Apply(); } }
+  public class ThemeToolCommandDev13    : AbstractMenuCommand { public override void Run() { "dev2o13-blue".Apply(); } }
   public class ThemeToolCommandDev13dyn : AbstractMenuCommand { public override void Run() { "dev2o13-dyn".Apply(); } }
   public class ThemeToolCommandDev11a   : AbstractMenuCommand { public override void Run() { "dev2o11".Apply(); } }
   public class ThemeToolCommandDev11b   : AbstractMenuCommand { public override void Run() { "dev2o11v2".Apply(); } }
@@ -45,22 +45,20 @@ namespace ThemeTool
   public class ToolCommandDev10Red      : AbstractMenuCommand { public override void Run() { "dev2010red".Apply(); } }
   public class ToolCommandExpressDark   : AbstractMenuCommand { public override void Run() { "ExpressionDark".Apply(); } }
   public class ToolCommandExpressLight  : AbstractMenuCommand { public override void Run() { "ExpressionLight".Apply(); } }
-//  public class ToolCommandCustom : AbstractMenuCommand
-//  {
-//    public override void Run()
-//    {
-//      var colorDialog = new ColorDialog();
-//      var result = colorDialog.ShowDialog();
-//      if (result == DialogResult.OK)
-//      {
-//        var color = colorDialog.Color;
-//        string clrStr = "#" + color.ToArgb().ToString("X8");
-//        var settings = new ToolSettings();
-//        settings.SetTheme(clrStr);
-//        settings.SaveSettings(clrStr);
-//      }
-//    }
-//  }
+  public class ToolCommandCustom : AbstractMenuCommand
+  {
+    public override void Run()
+    {
+      var colorDialog = new ColorDialog();
+      var result = colorDialog.ShowDialog();
+      if (result == DialogResult.OK)
+      {
+        var color = colorDialog.Color;
+        string clrStr = "#" + color.ToArgb().ToString("X8");
+        clrStr.Apply();
+      }
+    }
+  }
   public class ToolCommandStartup : AbstractMenuCommand
   {
     public BackgroundWorker bw;

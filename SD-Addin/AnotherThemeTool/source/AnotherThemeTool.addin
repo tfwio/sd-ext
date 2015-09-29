@@ -49,7 +49,7 @@
 			<MenuItem id="ThemeToolCommandAutumn" label="Autumn" class="ThemeTool.ToolCommandAutumn" />
 			<MenuItem id="ThemeToolCommandGrass" label="Grass" class="ThemeTool.ToolCommandGrass" />
 			<MenuItem type="Separator" />
-			<MenuItem id="ThemeToolCommandDev13" label="MSDEV 2013" class="ThemeTool.ThemeToolCommandDev13dyn" />
+			<MenuItem id="ThemeToolCommandDev13" label="Dev 2013 Blue" class="ThemeTool.ThemeToolCommandDev13" />
 			<MenuItem type="Separator" />
 			<MenuItem id="ThemeToolCommandDev10" label="Dev 2010 (orig)" class="ThemeTool.ToolCommandDev10_orig" />
 			<MenuItem id="ThemeToolCommandDev10Green" label="Dev 2010 Green" class="ThemeTool.ToolCommandDev10Green" />

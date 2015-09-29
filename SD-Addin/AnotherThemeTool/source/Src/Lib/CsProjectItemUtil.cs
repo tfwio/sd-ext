@@ -67,7 +67,7 @@ namespace ThemeTool.Logic
                 
                 if (info.HasLink && !Settings.IncludeLinks) continue;
                 
-                string temp = ReformatCommon(info,Strings.CompileElement2);
+                string temp = ReformatCommon(info,AnotherThemeTool.Strings.CompileElement2);
                 
                 info = null;
                 itemset.Add(temp);

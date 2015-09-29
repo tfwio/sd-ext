@@ -50,7 +50,7 @@ namespace ThemeTool.Logic
 			{
 				string v = p.GetMetadata(n);
 				if (!string.IsNullOrEmpty(v) && !string.IsNullOrEmpty(p.GetMetadata(n)))
-					keyn.Add(string.Format( Strings.FormatTag0, n, p.GetMetadata(n) ));
+					keyn.Add(string.Format( AnotherThemeTool.Strings.FormatTag0, n, p.GetMetadata(n) ));
 			}
 			return keyn;
 		}

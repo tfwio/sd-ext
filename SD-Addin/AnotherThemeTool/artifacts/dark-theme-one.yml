@@ -1,10 +1,11 @@
 Theme:
 - Name: blue-default
   # This is a comment
-  DefaultFontFamily: Segoe Script
+  DefaultFontFamily: Segoe UI
   # This is a comment
-  DefaultFontSize: 18
+  DefaultFontSize: 14
   GeomBrush0: '#FFFFFF'
+  DotsDefault: '#000000'
   # This is a comment
   GeomBrush1: '#35496A'
   GeomBrush2: '#293955'
