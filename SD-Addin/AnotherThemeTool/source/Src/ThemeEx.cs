@@ -3,7 +3,6 @@
   using System.Windows.Media;
   static public class ThemeEx
   {
-    
     const System.Globalization.NumberStyles nflag = System.Globalization.NumberStyles.HexNumber;
     
     static public System.Windows.Media.FontFamily ToFont(this string input)

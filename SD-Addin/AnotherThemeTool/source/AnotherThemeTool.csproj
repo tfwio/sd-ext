@@ -70,6 +70,10 @@
       <HintPath>C:\Program Files %28x86%29\SharpDevelop\5.0\bin\ICSharpCode.Core.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="ICSharpCode.Core.Presentation">
+      <HintPath>C:\Program Files %28x86%29\SharpDevelop\5.1\bin\ICSharpCode.Core.Presentation.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="ICSharpCode.SharpDevelop">
       <HintPath>C:\Program Files %28x86%29\SharpDevelop\5.0\bin\ICSharpCode.SharpDevelop.dll</HintPath>
       <Private>False</Private>
@@ -129,6 +133,7 @@
     <Compile Include="Src\MsDev2013_Settings.cs">
       <DependentUpon>MsDev2013_Settings.tt</DependentUpon>
       <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="Src\ThemeGen2.cs">
       <DependentUpon>ThemeGen2.tt</DependentUpon>
@@ -220,15 +225,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Src\Assets" />
-    <Folder Include="Src\Assets\Dev2010" />
-    <Folder Include="Src\Assets\ExpDark" />
-    <Folder Include="Src\Lib" />
-    <Folder Include="Src" />
-    <Folder Include="Src\Commands" />
-    <Folder Include="Src\View" />
-  </ItemGroup>
-  <ItemGroup>
     <Page Include="Src\Assets\dev2010.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -255,6 +251,9 @@
     <Page Include="Src\Assets\toolbar.xaml" />
     <Page Include="Src\View\EditorControl.xaml" />
     <Page Include="Src\View\ThemeEditorView.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

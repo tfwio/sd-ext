@@ -1,0 +1,20 @@
+ThemeName: MsDev2013
+Elements:
+- Name: MenuItemSelectionBorder
+  TypeName: Color
+  DefaultValue: FFE5C365
+- Name: MenuItemPressedBorder
+  TypeName: Color
+  DefaultValue: FFE5C365
+- Name: MenuBackgroundBrush
+  TypeName: LinearGradientBrush
+  DefaultValue: 'FFCAD3E2,FFC2CCDB:0.3,FFADB9CD:1.0'
+- Name: SubMenuBackgroundBrush
+  TypeName: LinearGradientBrush
+  DefaultValue: 'FFE9ECEE,FFD0D7E2:1.0'
+- Name: MenuItemSelectionFill
+  TypeName: LinearGradientBrush
+  DefaultValue: 'FFFFFCF4,FFFFF3CD:0.5,FFFFECB5:0.5,FFFFECB5:1.0'
+- Name: MenuItemPressedFill
+  TypeName: LinearGradientBrush
+  DefaultValue: 'FFFFE8A6,FFFFE8A6:0.5,FFFFE8A6:1'

@@ -75,21 +75,11 @@
   <SolidColorBrush x:Key="{ComponentResourceKey TypeInTargetAssembly={x:Type ad:DockingManager}, ResourceId={x:Static ad:AvalonDockBrushes.DocumentHeaderBorderSelected}}" Color="{Binding Source={x:Static th:MsDev2013_Theme.Instance}, Path=DocumentHeaderBorderSelected}" />
   <!--DocumentHeaderBorderSelectedActivated-->
   <SolidColorBrush x:Key="{ComponentResourceKey TypeInTargetAssembly={x:Type ad:DockingManager}, ResourceId={x:Static ad:AvalonDockBrushes.DocumentHeaderBorderSelectedActivated}}" Color="{Binding Source={x:Static th:MsDev2013_Theme.Instance}, Path=DocumentHeaderBorderSelectedActivated}" />
-  <DrawingBrush x:Key="PatternFillForToolWindow" TileMode="Tile" Viewbox="0,0,4,5" ViewboxUnits="Absolute" Viewport="0,0,4,5" ViewportUnits="Absolute">
-    <DrawingBrush.Drawing>
-      <GeometryDrawing Brush="{Binding Fill, ElementName=DragHandleGeometryPlaceholder, Mode=OneWay, Converter={StaticResource NullToDoNothingConverter}}">
-        <GeometryDrawing.Geometry>
-          <GeometryGroup>
-            <GeometryGroup.Children>
-              <RectangleGeometry Rect="0,0,1,1" />
-              <RectangleGeometry Rect="0,4,1,1" />
-              <RectangleGeometry Rect="2,2,1,1" />
-            </GeometryGroup.Children>
-          </GeometryGroup>
-        </GeometryDrawing.Geometry>
-      </GeometryDrawing>
-    </DrawingBrush.Drawing>
-  </DrawingBrush>
+  <SolidColorBrush x:Key="OverlayWindowMainBorderBrush" Color="{Binding Source={x:Static th:MsDev2013_Theme.Instance}, Path=OverlayWindowMainBorderBrush}" />
+  <SolidColorBrush x:Key="OverlayWindowIntBorderBrush" Color="{Binding Source={x:Static th:MsDev2013_Theme.Instance}, Path=OverlayWindowIntBorderBrush}" />
+  <LinearGradientBrush x:Key="OverlayWindowIntBorderBackground" StartPoint="0,0" EndPoint="0,1" GradientStops="{Binding Source={x:Static th:MsDev2013_Theme.Instance}, Path=OverlayWindowIntBorderBackground}" />
+  <SolidColorBrush x:Key="OverlayWindowIntBorderBrush2" Color="{Binding Source={x:Static th:MsDev2013_Theme.Instance}, Path=OverlayWindowIntBorderBrush2}" />
+  <LinearGradientBrush x:Key="OverlayWindowIntBorderBackground2" StartPoint="0,0" EndPoint="0,1" GradientStops="{Binding Source={x:Static th:MsDev2013_Theme.Instance}, Path=OverlayWindowIntBorderBackground2}" />
   <!--DockingManager-->
   <Style x:Key="{x:Type ad:DockingManager}" TargetType="{x:Type ad:DockingManager}">
     <Setter Property="Background" Value="{DynamicResource {ComponentResourceKey {x:Type ad:DockingManager}, {x:Static ad:AvalonDockBrushes.DefaultBackgroundBrush}}}" />
@@ -166,9 +156,7 @@
                   <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
                 <ad:ImageEx x:Name="Icon" Width="16" Source="{TemplateBinding Icon}" />
-                <!--<ad:AlignedImage>
-<ContentPresenter x:Name="Icon" Margin="1" ContentSource="Icon" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
-</ad:AlignedImage>-->
+                <!--<ad:AlignedImage><ContentPresenter x:Name="Icon" Margin="1" ContentSource="Icon" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/></ad:AlignedImage>-->
                 <TextBlock x:Name="tabItemTitle" Grid.Column="1" TextTrimming="CharacterEllipsis" TextWrapping="NoWrap" Text="{TemplateBinding Title}" Margin="2,0,0,0" VerticalAlignment="Center" Foreground="{StaticResource ResourceKey=LightForegroundBrush}" />
               </Grid>
             </Border>
@@ -234,7 +222,10 @@
                       <ColumnDefinition Width="Auto" />
                       <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
-                    <TextBlock Grid.Column="0" Text="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=SelectedItem.Title}" x:Name="paneTitle" Grid.Row="0" Margin="2,0,0,0" TextTrimming="CharacterEllipsis" TextWrapping="NoWrap" VerticalAlignment="Center" Foreground="{DynamicResource {ComponentResourceKey {x:Type ad:DockingManager}, {x:Static ad:AvalonDockBrushes.DockablePaneTitleForeground}}}" />
+                    <TextBlock Grid.Column="0"
+                               Text="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=SelectedItem.Title}"
+                               x:Name="paneTitle" Grid.Row="0" Margin="2,0,0,0" TextTrimming="CharacterEllipsis" TextWrapping="NoWrap" VerticalAlignment="Center"
+                               Foreground="{DynamicResource {ComponentResourceKey {x:Type ad:DockingManager}, {x:Static ad:AvalonDockBrushes.DockablePaneTitleForeground}}}" />
                     <Rectangle Margin="8,3,4,3" Grid.Column="1" Height="5" VerticalAlignment="Center">
                       <Rectangle.Fill>
                         <DrawingBrush TileMode="Tile" Viewbox="0,0,4,5" ViewboxUnits="Absolute" Viewport="0,0,4,5" ViewportUnits="Absolute">
@@ -437,7 +428,8 @@
       <Setter.Value>
         <ControlTemplate TargetType="{x:Type ad:DockablePaneAnchorTab}">
           <Grid>
-            <Border Name="PART_Border" Background="{DynamicResource {ComponentResourceKey {x:Type ad:DockingManager}, {x:Static ad:AvalonDockBrushes.DockablePaneTitleBackground}}}" TextBlock.Foreground="{StaticResource ResourceKey=LightForegroundBrush}" Padding="4,0,4,0">
+            <Border Name="PART_Border" Background="{DynamicResource {ComponentResourceKey {x:Type ad:DockingManager}, {x:Static ad:AvalonDockBrushes.DockablePaneTitleBackground}}}"
+                    TextBlock.Foreground="{StaticResource ResourceKey=LightForegroundBrush}" Padding="4,0,4,0">
               <Grid>
                 <Grid.ColumnDefinitions>
                   <ColumnDefinition Width="Auto" />
@@ -530,13 +522,8 @@
   <!--DockablePaneAnchorTabGroup-->
   <Style x:Key="{x:Type ad:DockablePaneAnchorTabGroup}" TargetType="{x:Type ad:DockablePaneAnchorTabGroup}">
     <Setter Property="Orientation" Value="Horizontal" />
-    <Setter Property="Margin" Value="0,0,0,0" />
+    <Setter Property="Margin" Value="10" />
   </Style>
-  <SolidColorBrush x:Key="OverlayWindowMainBorderBrush" Color="{Binding Source={x:Static th:MsDev2013_Theme.Instance}, Path=OverlayWindowMainBorderBrush}" />
-  <SolidColorBrush x:Key="OverlayWindowIntBorderBrush" Color="{Binding Source={x:Static th:MsDev2013_Theme.Instance}, Path=OverlayWindowIntBorderBrush}" />
-  <LinearGradientBrush x:Key="OverlayWindowIntBorderBackground" StartPoint="0,0" EndPoint="0,1" GradientStops="{Binding Source={x:Static th:MsDev2013_Theme.Instance}, Path=OverlayWindowIntBorderBackground}" />
-  <SolidColorBrush x:Key="OverlayWindowIntBorderBrush2" Color="{Binding Source={x:Static th:MsDev2013_Theme.Instance}, Path=OverlayWindowIntBorderBrush2}" />
-  <LinearGradientBrush x:Key="OverlayWindowIntBorderBackground2" StartPoint="0,0" EndPoint="0,1" GradientStops="{Binding Source={x:Static th:MsDev2013_Theme.Instance}, Path=OverlayWindowIntBorderBackground2}" />
   <!--OverlayWindow-->
   <Style x:Key="{x:Type ad:OverlayWindow}" TargetType="{x:Type ad:OverlayWindow}">
     <Setter Property="Background" Value="Transparent" />

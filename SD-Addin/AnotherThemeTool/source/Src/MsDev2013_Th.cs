@@ -67,7 +67,6 @@ namespace ThemeTool
       // Color CommonActiveTabHover                      = "5B7199".ToColor();
       // Color CommonActiveTabBorder                     = "8E9BBC".ToColor();
       theme.Name                                         = "blue-default";
-      theme.ResourceID                                   = "dev2o13-dyn";
       theme.DefaultFontFamily                            = new FontFamily("Open Sans");
       theme.DefaultFontSize                              = 14;
       theme.DotsDefault                                  = "00000000".ToColor();

@@ -87,6 +87,8 @@ namespace ThemeTool
                    var m = settings.LoadSettings();
                    var t = m.Theme[0];
                    settings.SetTheme(t.ToTheme());
+                   
+                   
                  }
                 )
               );

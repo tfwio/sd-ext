@@ -117,6 +117,76 @@ namespace System
       tefaut = null;
       return settings;
     }
+  
+    #region Load
+    
+    static public MsDev2013SettingsCollection LoadSettingsCollection(System.IO.FileInfo Info)
+    {
+      var data = System.IO.File.ReadAllText(Info.FullName);
+      MsDev2013SettingsCollection settings = null;
+      using (var reader = new System.IO.StringReader(data))
+      {
+        var deserializer = new YamlDotNet.Serialization.Deserializer(ignoreUnmatched:false);
+        try {
+          settings = deserializer.Deserialize<MsDev2013SettingsCollection>(reader);
+        } catch (Exception err) {
+          System.Windows.MessageBox.Show(
+            err.ToString(),
+            "Error",
+            System.Windows.MessageBoxButton.OK,
+            System.Windows.MessageBoxImage.Error);
+        }
+      }
+      return settings;
+    }
+    
+    /// <summary>
+    /// Themes are typically at index 0.
+    /// </summary>
+    static public MsDev2013_Theme Load2013Theme(System.IO.FileInfo Info, int index)
+    {
+      var settings = LoadSettingsCollection(Info);
+      return settings.Theme[index].ToTheme();
+    }
+    
+    #endregion
+    
+    static public MsDev2013SettingsCollection Wrap(params MsDev2013Settings[] input)
+    {
+      return new MsDev2013SettingsCollection()
+      {
+        Theme = new System.Collections.Generic.List<MsDev2013Settings>(input)
+      };
+    }
+    
+    #region Save
+    
+    static public void SaveTheme(this MsDev2013_Theme theme)
+    {
+      using (var sfd = new System.Windows.Forms.SaveFileDialog() { Filter = "YAML File|*.yml" })
+      {
+        if (sfd.ShowDialog() != System.Windows.Forms.DialogResult.OK) return;
+        theme.SaveTheme(sfd.FileName);
+      }
+    }
+    
+    static public void SaveTheme(this MsDev2013_Theme theme, string fileName)
+    {
+      var serializer = new YamlDotNet.Serialization.Serializer();
+      
+      using (var writer = new System.IO.StringWriter())
+      {
+        var themeSettings = Wrap(theme.ToSetting());
+        serializer.Serialize(writer, themeSettings, typeof(MsDev2013SettingsCollection));
+        var stringdata = writer.ToString();
+        System.IO.File.WriteAllText(fileName, stringdata);
+      }
+      serializer = null;
+    }
+    
+    #endregion
+  
+
   }
 }
 
