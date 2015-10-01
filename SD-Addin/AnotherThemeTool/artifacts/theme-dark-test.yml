@@ -2,45 +2,61 @@ Theme:
 - Name: blue-default
   DefaultFontSize: 14
   DefaultFontFamily: Roboto
-  DotsDefault: '#59A8DE'
-  GeomBrush0: '#FFFFFF'
-  GeomBrush1: '#35496A'
-  GeomBrush2: '#293955'
+  #DotsDefault: '#4059A8DE'
+  DotsDefault: '#40FFFFFF'
+
   DefaultBackgroundBrush: '#2D2D30'
-  LightForegroundBrush: '#A0A0A0'
+
+  # Un-selected Docked Tab-Strip Item
+  LightForegroundBrush: '#606060'
+  
+  # This will apply to the main Selected Document Header Tab
   DarkForegroundBrush: '#FFFFFF'
+  
   ManagedContentTabControlNormalBorderBrush: '#00FFFFFF'
+  
   ManagedContentTabItemNormalBackground: '#00000000'
   ManagedContentTabItemNormalForeground: '#4D6082'
+
   ManagedContentTabItemNormalBorderBrush: '#3F3F46'
+  
   ManagedContentTabItemInvNormalBackground: '#00FF00:1'
   ManagedContentTabItemInvHotBackground: '#30000000:1'
   ManagedContentTabItemHotBackground: '#3E3E40:1'
+  
   ManagedContentTabItemHotBorderBrush: '#3F3F46'
+  
   ManagedContentTabItemSelectedBackground: '#252526'
   ManagedContentTabItemSelectedForeground: '#1B94E5'
   ManagedContentTabItemSelectedBorderBackround: '#FFFFFF'
   ManagedContentTabItemSelectedBorderBrush: '#3F3F46'
+  
   ManagedContentTabItemDisabledForeground: '#4D6082'
   ManagedContentTabItemDisabledBackground: '#4D6082'
   ManagedContentTabItemDisabledBorderBrush: '#3F3F46'
+  
   DockablePaneTitleBackgroundSelected: '#007ACC:1'
   DockablePaneTitleBackground: '#2D2D30:1'
   DockablePaneTitleForeground: '#A0A0A0'
   DockablePaneTitleForegroundSelected: '#FFFFFF'
+  
   DocumentHeaderBackground: '#007ACC:1'
   DocumentHeaderBackgroundSelected: '#3F3F46:1'
   DocumentHeaderBackgroundSelectedActivated: '#007ACC:1'
   DocumentHeaderBackgroundMouseOver: '#1B94E5'
+
   DocumentHeaderForeground: '#A0A0A0'
   DocumentHeaderForegroundSelected: '#FFFFFF'
   DocumentHeaderForegroundSelectedActivated: '#FFFFFF'
+
   DocumentHeaderBorder: '#FF0000'
   DocumentHeaderBorderSelected: '#4D6082'
   DocumentHeaderBorderSelectedActivated: '#007ACC'
   DocumentHeaderBorderBrushMouseOver: '#00000000'
+
   PaneHeaderCommandBorderBrush: '#4D6082,#4D6082:1'
   PaneHeaderCommandBackground: '#FFFFFF'
+
   OverlayWindowMainBorderBrush: '#4D6082'
   OverlayWindowIntBorderBackground: '#FFFFFF,#C0C0C0:1'
   OverlayWindowIntBorderBrush: '#00FF00'
