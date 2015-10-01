@@ -15,7 +15,7 @@ namespace ThemeTool.Commands
           var themeSettings = new MsDev2013SettingsCollection()
           {
             Theme =new System.Collections.Generic.List<MsDev2013Settings>
-            { { MsDev2013Settings.FromTheme(MsDev2013_Theme.Instance) } }
+            { { MsDev2013_Theme.Instance.ToSetting() } }
           };
           
           serializer.Serialize(writer, themeSettings, typeof(MsDev2013SettingsCollection));
