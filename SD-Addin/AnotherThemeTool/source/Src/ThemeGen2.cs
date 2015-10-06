@@ -14,9 +14,6 @@ namespace System
       settings.DefaultFontSize                               = (theme.DefaultFontSize                               ?? tefaut.DefaultFontSize                              ).ToString();
       settings.DefaultFontFamily                             = (theme.DefaultFontFamily                             ?? tefaut.DefaultFontFamily                            ).ToString();
       settings.DotsDefault                                   = (theme.DotsDefault                                   ?? tefaut.DotsDefault                                  ).ToHexString(true);
-      settings.GeomBrush0                                    = (theme.GeomBrush0                                    ?? tefaut.GeomBrush0                                   ).ToHexString(true);
-      settings.GeomBrush1                                    = (theme.GeomBrush1                                    ?? tefaut.GeomBrush1                                   ).ToHexString(true);
-      settings.GeomBrush2                                    = (theme.GeomBrush2                                    ?? tefaut.GeomBrush2                                   ).ToHexString(true);
       settings.DefaultBackgroundBrush                        = (theme.DefaultBackgroundBrush                        ?? tefaut.DefaultBackgroundBrush                       ).ToHexString(true);
       settings.LightForegroundBrush                          = (theme.LightForegroundBrush                          ?? tefaut.LightForegroundBrush                         ).ToHexString(true);
       settings.DarkForegroundBrush                           = (theme.DarkForegroundBrush                           ?? tefaut.DarkForegroundBrush                          ).ToHexString(true);
@@ -70,9 +67,6 @@ namespace System
       settings.DefaultFontSize = double.Parse(theme.DefaultFontSize ?? tefaut.DefaultFontSize);
       settings.DefaultFontFamily = new FontFamily((theme.DefaultFontFamily ?? tefaut.DefaultFontFamily).ToString());
       settings.DotsDefault                                   = (theme.DotsDefault                                   ?? tefaut.DotsDefault                                  ).ToColor();
-      settings.GeomBrush0                                    = (theme.GeomBrush0                                    ?? tefaut.GeomBrush0                                   ).ToColor();
-      settings.GeomBrush1                                    = (theme.GeomBrush1                                    ?? tefaut.GeomBrush1                                   ).ToColor();
-      settings.GeomBrush2                                    = (theme.GeomBrush2                                    ?? tefaut.GeomBrush2                                   ).ToColor();
       settings.DefaultBackgroundBrush                        = (theme.DefaultBackgroundBrush                        ?? tefaut.DefaultBackgroundBrush                       ).ToColor();
       settings.LightForegroundBrush                          = (theme.LightForegroundBrush                          ?? tefaut.LightForegroundBrush                         ).ToColor();
       settings.DarkForegroundBrush                           = (theme.DarkForegroundBrush                           ?? tefaut.DarkForegroundBrush                          ).ToColor();

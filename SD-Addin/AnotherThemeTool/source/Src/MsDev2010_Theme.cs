@@ -10,9 +10,6 @@ namespace ThemeTool
     {
       //"3D5277".ToColor
       var theme = new MsDev2010_Theme();
-      theme.GeomBrush0                                   = "2C3D5A".ToColor();
-      theme.GeomBrush1                                   = "35496A".ToColor();
-      theme.GeomBrush2                                   = "293955".ToColor();
       theme.ManagedContentTabControlNormalBorderBrush    = Colors.Transparent;
       theme.DefaultBackgroundBrush                       = Colors.Transparent;
       theme.LightForegroundBrush                         = Colors.White;

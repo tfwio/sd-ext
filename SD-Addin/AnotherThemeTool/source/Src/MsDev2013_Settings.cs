@@ -17,9 +17,6 @@ namespace ThemeTool
     public string DefaultFontSize                               { get; set; }
     public string DefaultFontFamily                             { get; set; }
     public string DotsDefault                                   { get; set; }
-    public string GeomBrush0                                    { get; set; }
-    public string GeomBrush1                                    { get; set; }
-    public string GeomBrush2                                    { get; set; }
     public string DefaultBackgroundBrush                        { get; set; }
     public string LightForegroundBrush                          { get; set; }
     public string DarkForegroundBrush                           { get; set; }

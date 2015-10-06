@@ -1,12 +1,10 @@
 Theme:
 - ResourceID: dev2o13-dyn
   Name: dev2013-light
-  DefaultFontSize: 12
-  DefaultFontFamily: Open Sans
+  DefaultFontSize: 18
+  # anonymous pro, roboto, FreeSans, Open Sans
+  DefaultFontFamily: anonymous pro
   DotsDefault: '#59A8DE'
-  GeomBrush0: '#FFFFFF'
-  GeomBrush1: '#35496A'
-  GeomBrush2: '#293955'
   DefaultBackgroundBrush: '#EEEEF2'
   LightForegroundBrush: '#A0A0A0'
   DarkForegroundBrush: '#FFFFFF'

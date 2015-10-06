@@ -52,6 +52,7 @@ namespace ThemeTool.Commands
         AvalonDock.ThemeFactory.ChangeTheme(new Uri("/AnotherThemeTool;component/src/assets/dev2o13_dynamic.xaml",UriKind.RelativeOrAbsolute));
         var settings = new ThemeTool.Logic.ToolSettings();
         settings.SaveSettings(theme);
+        ICSharpCode.SharpDevelop.Gui.PropertyPad.Grid.SelectedObject = MsDev2013_Theme.Instance;
       } catch (Exception err) {
         System.Windows.MessageBox.Show(
           err.ToString(),

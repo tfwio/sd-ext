@@ -15,15 +15,6 @@ Elements:
 - Name: DotsDefault
   TypeName: Color
   DefaultValue: 40FFFFFF
-- Name: GeomBrush0
-  TypeName: Color
-  DefaultValue: 35496A
-- Name: GeomBrush1
-  TypeName: Color
-  DefaultValue: 35496A
-- Name: GeomBrush2
-  TypeName: Color
-  DefaultValue: 293955
 - Name: DefaultBackgroundBrush
   TypeName: Color
   DefaultValue: 293955

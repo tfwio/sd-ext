@@ -88,7 +88,7 @@
     /// Hex strings can be either 6 or eight X-chars long and may or not
     /// start with "0x" and "#".
     /// </summary>
-    static GradientStop ToGradientStop(this string input)
+    public static GradientStop ToGradientStop(this string input)
     {
       var data = input.Clean();
       if (!data.Contains(":")) return new GradientStop(data.ToColor(),0);

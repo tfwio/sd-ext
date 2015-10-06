@@ -1,19 +1,18 @@
 ﻿// Generated from: "$(projectdir)../artifacts/msdev2013theme.yaml"
 using System;
+using System.ComponentModel;
 using System.Windows.Media;
 namespace ThemeTool
 {
   public class MsDev2013_Theme
   {
-    static public MsDev2013_Theme Instance = Apply();
+    static MsDev2013_Theme(){ Instance=Apply(); }
+    static public MsDev2013_Theme Instance { get; set; }
     public string                 ResourceID                                    { get; set; }
     public string                 Name                                          { get; set; }
     public Double               ? DefaultFontSize                               { get; set; }
     public FontFamily             DefaultFontFamily                             { get; set; }
     public Color                ? DotsDefault                                   { get; set; }
-    public Color                ? GeomBrush0                                    { get; set; }
-    public Color                ? GeomBrush1                                    { get; set; }
-    public Color                ? GeomBrush2                                    { get; set; }
     public Color                ? DefaultBackgroundBrush                        { get; set; }
     public Color                ? LightForegroundBrush                          { get; set; }
     public Color                ? DarkForegroundBrush                           { get; set; }
@@ -21,8 +20,11 @@ namespace ThemeTool
     public Color                ? ManagedContentTabItemNormalBackground         { get; set; }
     public Color                ? ManagedContentTabItemNormalForeground         { get; set; }
     public Color                ? ManagedContentTabItemNormalBorderBrush        { get; set; }
+    [TypeConverter(typeof(GradientStopExpandableConverter))]
     public GradientStopCollection ManagedContentTabItemInvNormalBackground      { get; set; }
+    [TypeConverter(typeof(GradientStopExpandableConverter))]
     public GradientStopCollection ManagedContentTabItemInvHotBackground         { get; set; }
+    [TypeConverter(typeof(GradientStopExpandableConverter))]
     public GradientStopCollection ManagedContentTabItemHotBackground            { get; set; }
     public Color                ? ManagedContentTabItemHotBorderBrush           { get; set; }
     public Color                ? ManagedContentTabItemSelectedBackground       { get; set; }
@@ -32,13 +34,19 @@ namespace ThemeTool
     public Color                ? ManagedContentTabItemDisabledForeground       { get; set; }
     public Color                ? ManagedContentTabItemDisabledBackground       { get; set; }
     public Color                ? ManagedContentTabItemDisabledBorderBrush      { get; set; }
+    [TypeConverter(typeof(GradientStopExpandableConverter))]
     public GradientStopCollection DockablePaneTitleBackgroundSelected           { get; set; }
+    [TypeConverter(typeof(GradientStopExpandableConverter))]
     public GradientStopCollection DockablePaneTitleBackground                   { get; set; }
     public Color                ? DockablePaneTitleForeground                   { get; set; }
     public Color                ? DockablePaneTitleForegroundSelected           { get; set; }
+    [TypeConverter(typeof(GradientStopExpandableConverter))]
     public GradientStopCollection DocumentHeaderBackground                      { get; set; }
+    [TypeConverter(typeof(GradientStopExpandableConverter))]
     public GradientStopCollection DocumentHeaderBackgroundSelected              { get; set; }
+    [TypeConverter(typeof(GradientStopExpandableConverter))]
     public GradientStopCollection DocumentHeaderBackgroundSelectedActivated     { get; set; }
+    [TypeConverter(typeof(GradientStopExpandableConverter))]
     public GradientStopCollection DocumentHeaderBackgroundMouseOver             { get; set; }
     public Color                ? DocumentHeaderForeground                      { get; set; }
     public Color                ? DocumentHeaderForegroundSelected              { get; set; }
@@ -70,9 +78,6 @@ namespace ThemeTool
       theme.DefaultFontFamily                            = new FontFamily("Open Sans");
       theme.DefaultFontSize                              = 14;
       theme.DotsDefault                                  = "00000000".ToColor();
-      theme.GeomBrush0                                   = "2C3D5A".ToColor(); // these three not used
-      theme.GeomBrush1                                   = "35496A".ToColor();
-      theme.GeomBrush2                                   = "293955".ToColor();
       theme.DefaultBackgroundBrush                       = "293955".ToColor();
       theme.LightForegroundBrush                         = "000000".ToColor();
       theme.DarkForegroundBrush                          = "000000".ToColor();

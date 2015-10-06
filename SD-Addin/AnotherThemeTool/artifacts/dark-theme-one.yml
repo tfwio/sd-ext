@@ -5,7 +5,7 @@ Theme:
   # This is a comment
   DefaultFontSize: 14
   GeomBrush0: '#FFFFFF'
-  DotsDefault: '#000000'
+  DotsDefault: '#40FFFFFF'
   # This is a comment
   GeomBrush1: '#35496A'
   GeomBrush2: '#293955'

@@ -15,7 +15,8 @@ namespace ThemeTool
 {
   public class <#=ThemeID#>
   {
-    static public <#=ThemeID#> Instance = Apply();
+    static <#=ThemeID#>(){ Instance=Apply(); }
+    static public <#=ThemeID#> Instance { get; set; }
 <#= ThemeGen.Execute(ExecuteMode.ClassData, ThemeData) #>
     
     static public <#=ThemeID#> Apply()
@@ -32,9 +33,6 @@ namespace ThemeTool
       theme.DefaultFontFamily                            = new FontFamily("Open Sans");
       theme.DefaultFontSize                              = 14;
       theme.DotsDefault                                  = "00000000".ToColor();
-      theme.GeomBrush0                                   = "2C3D5A".ToColor(); // these three not used
-      theme.GeomBrush1                                   = "35496A".ToColor();
-      theme.GeomBrush2                                   = "293955".ToColor();
       theme.DefaultBackgroundBrush                       = "293955".ToColor();
       theme.LightForegroundBrush                         = "000000".ToColor();
       theme.DarkForegroundBrush                          = "000000".ToColor();
