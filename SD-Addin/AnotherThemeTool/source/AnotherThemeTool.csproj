@@ -125,6 +125,7 @@
   <ItemGroup>
     <Compile Include="Src\Commands\ExportMsDev2013Theme.cs" />
     <Compile Include="Src\Commands\ImportMsDev2013Theme.cs" />
+    <Compile Include="Src\Commands\LoadXamlTheme.cs" />
     <Compile Include="Src\Commands\ShowImportUtilityControl.cs" />
     <Compile Include="Src\Commands\ThemeTool.cs" />
     <Compile Include="Src\Commands\ToolSettings.cs">
@@ -135,6 +136,7 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="Src\StringConverter.cs" />
     <Compile Include="Src\ThemeGen2.cs">
       <DependentUpon>ThemeGen2.tt</DependentUpon>
       <AutoGen>True</AutoGen>

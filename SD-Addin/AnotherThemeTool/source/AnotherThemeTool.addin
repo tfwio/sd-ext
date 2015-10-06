@@ -26,6 +26,8 @@
 	  <MenuItem id="ThemeInOut" label="Import/Export Theme" type="Menu">
   		<MenuItem id="TestImport" label="Import 2013 Theme" class="ThemeTool.Commands.ImportMsDev2013Theme" />
   		<MenuItem id="TextExport" label="Export 2013 Theme" class="ThemeTool.Commands.ExportMsDev2013Theme" />
+			<MenuItem type="Separator" />
+  		<MenuItem id="XamlImport" label="Import XAML Theme" class="ThemeTool.Commands.LoadXamlTheme" />
 			<!--
 	    <MenuItem type="Separator" />
   		<MenuItem id="PgImport" label="FontSize Increase" shortcut="Ctrl|+" />
