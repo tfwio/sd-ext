@@ -15,6 +15,7 @@ While there are screen-shots, there currently isn't an implementation which save
 - Load XAML themes (not including the following noted 'dynamic theme').
 - Import/Export color settings for the modified 'dynamic' theme.
 - Imported settings can be modified in SD's property-grid
+- Change one FontSize and FontFamily setting  which overrides most every SharpDevelop WorkBench control-typography, aside AvalonEdit and other areas with font-customization settings.
 - The dev2010 theme was modified slightly
     - Inspired by Dev2013 theme for AvalonDock-3.0.
     - Color settings are now 'dynamic', which allows you to customize.
