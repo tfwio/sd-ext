@@ -3,7 +3,7 @@ Theme:
   Name: dev2013-light
   DefaultFontSize: 18
   # anonymous pro, roboto, FreeSans, Open Sans
-  DefaultFontFamily: anonymous pro
+  DefaultFontFamily: Open Sans
   DotsDefault: '#59A8DE'
   DefaultBackgroundBrush: '#EEEEF2'
   LightForegroundBrush: '#A0A0A0'

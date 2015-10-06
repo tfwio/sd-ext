@@ -3,9 +3,6 @@ Theme:
   DefaultFontSize: 11
   DefaultFontFamily: Segoe UI
   DotsDefault: '#40FFFFFF'
-  GeomBrush0: '#2C3D5A'
-  GeomBrush1: '#35496A'
-  GeomBrush2: '#293955'
   DefaultBackgroundBrush: '#293955'
 
   # Watch what changes when changing these two (first)
