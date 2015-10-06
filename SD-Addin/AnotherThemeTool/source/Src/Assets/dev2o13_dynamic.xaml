@@ -193,6 +193,8 @@
   </Style>
   <!--DockablePane -->
   <Style x:Key="{x:Type ad:DockablePane}" TargetType="{x:Type ad:DockablePane}">
+    <Setter Property="FontFamily" Value="{Binding Source={x:Static th:MsDev2013_Theme.Instance}, Path=DefaultFontFamily}" />
+    <Setter Property="FontSize" Value="{Binding Source={x:Static th:MsDev2013_Theme.Instance}, Path=DefaultFontSize}" />
     <Setter Property="Background" Value="{DynamicResource {ComponentResourceKey {x:Type ad:DockingManager}, {x:Static ad:AvalonDockBrushes.DefaultBackgroundBrush}}}" />
     <Setter Property="Template">
       <Setter.Value>
@@ -743,6 +745,8 @@
     <Setter Property="ResizeMode" Value="NoResize" />
     <Setter Property="WindowStyle" Value="None" />
     <Setter Property="Background" Value="{x:Null}" />
+    <Setter Property="FontFamily" Value="{Binding Source={x:Static th:MsDev2013_Theme.Instance}, Path=DefaultFontFamily}" />
+    <Setter Property="FontSize" Value="{Binding Source={x:Static th:MsDev2013_Theme.Instance}, Path=DefaultFontSize}" />
     <Setter Property="Template">
       <Setter.Value>
         <ControlTemplate TargetType="{x:Type ad:DocumentFloatingWindow}">
