@@ -16,14 +16,15 @@ While there are screen-shots, there currently isn't an implementation which save
 ## Features In Progress
 
 - The dev2010 theme was modified slightly
-    - Inspired by Dev2013 theme for AvalonDock-3.0
+    - Inspired by Dev2013 theme for AvalonDock-3.0.  I've taken their nicely crafted tiled-graphics and thrown it into dockable title-bars.
     - Color settings are now 'dynamic', which allows you to customize.
     - Theme settings are stored in YAML setting files.
 
 ## How to customize the theme
 
-- Export a theme file from the Tools-Menu.
-- Import the theme back into SD through the same menu.
+- Export a theme file from the Tools-Menu `Tools/'Import/Export Theme'/Export 2013 Theme`, or download one of the setting-files linked to somewhere in this readme...
+- Edit the theme.
+- Import the theme back into SD through the same menu (as 'export').
 - Open the file in a text editor
     - Incidentally, when you load the file in SharpDevelop's text-editor, it ignores changes for some reason... So you may as well use another text editor for now...
     - AvalonDock theme in SharpDevelop automatically updates when you save the settings file.
