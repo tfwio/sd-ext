@@ -7,18 +7,18 @@ Is kind of a shot in the dark, made partly out of curiosity as to what kinds of 
 
 While there are screen-shots, there currently isn't an implementation which saves your setting for load-time after closing down SD and relaunching.
 
-![](https://raw.githubusercontent.com/tfwio/sd-ext/0c9d644e1975e4bdc1ecdbdb031c3df0852beed4/SD-Addin/AnotherThemeTool/artifacts/screen-blue.png)
+![](https://raw.githubusercontent.com/tfwio/sd-ext/274c52d36886b529eb79ff80658b98935439f990/SD-Addin/AnotherThemeTool/artifacts/screen-light.jpg)
 
-![](https://raw.githubusercontent.com/tfwio/sd-ext/0c9d644e1975e4bdc1ecdbdb031c3df0852beed4/SD-Addin/AnotherThemeTool/artifacts/screen-light.png)
+## Featured
 
-![](https://raw.githubusercontent.com/tfwio/sd-ext/0c9d644e1975e4bdc1ecdbdb031c3df0852beed4/SD-Addin/AnotherThemeTool/artifacts/screen-dark.png)
-
-## Features In Progress
-
+- Same old ThemeTool
+- Load XAML themes (not including the following noted 'dynamic theme').
+- Import/Export color settings for the modified 'dynamic' theme.
+- Imported settings can be modified in SD's property-grid
 - The dev2010 theme was modified slightly
-    - Inspired by Dev2013 theme for AvalonDock-3.0.  I've taken their nicely crafted tiled-graphics and thrown it into dockable title-bars.
+    - Inspired by Dev2013 theme for AvalonDock-3.0.
     - Color settings are now 'dynamic', which allows you to customize.
-    - Theme settings are stored in YAML setting files.
+    - tiled-graphics ([stolen from here](https://github.com/4ux-nbIx/AvalonDock.Themes.VS2013/blob/21723c3a22941d883a88afaee1581eea5c836f33/Xceed.Wpf.AvalonDock.Themes.VS2013/Theme.xaml#L485 'github.com/4ux-nbIx/AvalonDock.Themes.VS2013')) and thrown it into dockable title-bars.
 
 ## How to customize the theme
 
@@ -36,7 +36,7 @@ Its fairly easy to tell the difference between a color setting and a GradientSto
 Just look at the example setting-files for a good example.
 *property-grid settings don't apply—just yet*.
 
-See: [/SD-Addin/AnotherThemeTool/artifacts/theme-default.yml](https://github.com/tfwio/sd-ext/blob/master/SD-Addin/AnotherThemeTool/artifacts/theme-default.yml)
+See: [/SD-Addin/ThemeTool/artifacts/theme-default.yml](https://github.com/tfwio/sd-ext/blob/master/SD-Addin/ThemeTool/artifacts/theme-default.yml)
 
 **Color Examples in YAML-settings**
 
