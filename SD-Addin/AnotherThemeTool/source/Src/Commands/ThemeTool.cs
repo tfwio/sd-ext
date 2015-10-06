@@ -66,8 +66,8 @@ namespace ThemeTool
     {
       try
       {
-//        string path = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetAssembly(GetType()).Location);
-//        System.Reflection.Assembly.LoadFrom(System.IO.Path.Combine(path, "AvalonDock.Themes.dll"));
+        //string path = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetAssembly(GetType()).Location);
+        //System.Reflection.Assembly.LoadFrom(System.IO.Path.Combine(path, "AvalonDock.Themes.dll"));
         bw = new BackgroundWorker();
         bw.DoWork += delegate
         {
@@ -85,6 +85,7 @@ namespace ThemeTool
                  {
                    var settings = new ToolSettings();
                    var m = settings.LoadSettings();
+                   if (m==null) return;
                    var t = m.Theme[0];
                    settings.SetTheme(t.ToTheme());
                    
