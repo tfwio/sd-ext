@@ -111,7 +111,7 @@
     </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="YamlDotNet">
-      <HintPath>..\visualstudio\packages\YamlDotNet.3.7.0\lib\net35\YamlDotNet.dll</HintPath>
+      <HintPath>..\..\vs-project\packages\YamlDotNet.3.9.0\lib\net35\YamlDotNet.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

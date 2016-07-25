@@ -2,8 +2,7 @@ Theme:
 - ResourceID: dev2o13-dyn
   Name: dev2013-light
   DefaultFontSize: 18
-  # anonymous pro, roboto, FreeSans, Open Sans
-  DefaultFontFamily: Open Sans
+  DefaultFontFamily: Montserrat
   DotsDefault: '#59A8DE'
   DefaultBackgroundBrush: '#EEEEF2'
   LightForegroundBrush: '#A0A0A0'
