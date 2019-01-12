@@ -1,4 +1,8 @@
-﻿# PRETHROW: Another ThemeTool
+﻿title:Another ThemeTool
+author:myself
+date:timesphere
+
+# PRETHROW: Another ThemeTool
 
 targets SharpDevelop 5.x (AvalonDock-1.3)
 

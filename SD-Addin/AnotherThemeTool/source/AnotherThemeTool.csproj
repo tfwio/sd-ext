@@ -14,6 +14,8 @@
     <NoStdLib>False</NoStdLib>
     <WarningLevel>4</WarningLevel>
     <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <SharpDevelopVersion>5.2</SharpDevelopVersion>
+    <SharpDevelopBin>C:\Program Files %28x86%29\SharpDevelop\$(SharpDevelopVersion)\bin</SharpDevelopBin>
     <ReferencePath>C:\Program Files %28x86%29\SharpDevelop\5.1\bin</ReferencePath>
     <OutputPath>bin\$(Configuration)</OutputPath>
     <NoWin32Manifest>False</NoWin32Manifest>
@@ -56,27 +58,31 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AvalonDock">
-      <HintPath>C:\Program Files %28x86%29\SharpDevelop\5.0\bin\AvalonDock.dll</HintPath>
+      <HintPath>$(SharpDevelopBin)\AvalonDock.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="ICSharpCode.AvalonEdit">
-      <HintPath>C:\Program Files %28x86%29\SharpDevelop\5.0\bin\ICSharpCode.AvalonEdit.dll</HintPath>
+      <HintPath>$(SharpDevelopBin)\ICSharpCode.AvalonEdit.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="ICSharpCode.Core">
-      <HintPath>C:\Program Files %28x86%29\SharpDevelop\5.0\bin\ICSharpCode.Core.dll</HintPath>
+      <HintPath>$(SharpDevelopBin)\ICSharpCode.Core.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="ICSharpCode.Core.Presentation">
-      <HintPath>C:\Program Files %28x86%29\SharpDevelop\5.1\bin\ICSharpCode.Core.Presentation.dll</HintPath>
+      <HintPath>$(SharpDevelopBin)\ICSharpCode.Core.Presentation.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="ICSharpCode.SharpDevelop">
-      <HintPath>C:\Program Files %28x86%29\SharpDevelop\5.0\bin\ICSharpCode.SharpDevelop.dll</HintPath>
+    <Reference Include="ICSharpCode.SharpDevelop.dll">
+      <HintPath>$(SharpDevelopBin)\ICSharpCode.SharpDevelop.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SharpDevelop.exe">
+      <HintPath>$(SharpDevelopBin)\SharpDevelop.exe</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="ICSharpCode.SharpDevelop.Widgets">
-      <HintPath>C:\Program Files %28x86%29\SharpDevelop\5.0\bin\ICSharpCode.SharpDevelop.Widgets.dll</HintPath>
+      <HintPath>$(SharpDevelopBin)\ICSharpCode.SharpDevelop.Widgets.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json">
@@ -93,9 +99,9 @@
     <Reference Include="PresentationFramework.Royale">
       <RequiredTargetFramework>3.0</RequiredTargetFramework>
     </Reference>
-    <Reference Include="SharpDevelop">
+    <!--<Reference Include="SharpDevelop">
       <Private>False</Private>
-    </Reference>
+    </Reference>-->
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>

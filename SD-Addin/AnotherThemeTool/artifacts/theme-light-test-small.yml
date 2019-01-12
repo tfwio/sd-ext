@@ -1,7 +1,7 @@
 Theme:
 - ResourceID: dev2o13-dyn
   Name: dev2013-light
-  DefaultFontSize: 15
+  DefaultFontSize: 10
   DefaultFontFamily: Montserrat
   DotsDefault: '#59A8DE'
   DefaultBackgroundBrush: '#EEEEF2'

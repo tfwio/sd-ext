@@ -1,10 +1,7 @@
 ﻿/*
- * Created by SharpDevelop.
  * User: oio
  * Date: 11/20/2012
  * Time: 2:43 PM
- * 
- * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
 using System;
 using System.Windows.Threading;
@@ -27,9 +24,9 @@ namespace ThemeTool.Commands
     {
       if (watcher==null) watcher = new System.IO.FileSystemWatcher();
       watcher.EnableRaisingEvents = false;
-      System.Windows.MessageBox.Show(
-        string.Format(Info==null?"wtf?":Info.FullName,Info==null ? "wtf":Info.Directory.Name)
-       );
+      //System.Windows.MessageBox.Show(
+      //  string.Format(Info==null?"wtf?":Info.FullName,Info==null ? "wtf":Info.Directory.Name)
+      // );
       watcher.Path=Info.Directory.FullName;
       watcher.Filter = Info.Name;
       watcher.NotifyFilter = System.IO.NotifyFilters.LastWrite;
